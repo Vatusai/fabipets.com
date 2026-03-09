@@ -2,10 +2,12 @@ import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Ruler, Check, RefreshCw } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SizeGuide = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const leftCardRef = useRef<HTMLDivElement>(null);
@@ -15,18 +17,18 @@ const SizeGuide = () => {
   const sizeSteps = [
     {
       icon: Ruler,
-      title: 'Measure',
-      description: 'Measure neck, chest, and length',
+      title: t('sizeGuide.steps.measure.title'),
+      description: t('sizeGuide.steps.measure.description'),
     },
     {
       icon: Check,
-      title: 'Adjust',
-      description: 'Adjustable straps for growing pets',
+      title: t('sizeGuide.steps.adjust.title'),
+      description: t('sizeGuide.steps.adjust.description'),
     },
     {
       icon: RefreshCw,
-      title: 'Returns',
-      description: 'Easy returns if the size is not right',
+      title: t('sizeGuide.steps.returns.title'),
+      description: t('sizeGuide.steps.returns.description'),
     },
   ];
 
@@ -113,10 +115,10 @@ const SizeGuide = () => {
         {/* Heading */}
         <div ref={headingRef} className="mb-12">
           <h2 className="font-display font-black text-black text-4xl md:text-6xl uppercase">
-            Size & Fit
+            {t('sizeGuide.title')}
           </h2>
           <p className="font-body text-black/60 mt-4 text-lg">
-            Finding the perfect fit for your furry friend.
+            {t('sizeGuide.subtitle')}
           </p>
         </div>
 
@@ -129,22 +131,22 @@ const SizeGuide = () => {
           >
             <div className="fabipets-card p-6 md:p-8 h-full">
               <h3 className="font-display font-bold text-black text-xl mb-6">
-                How to Measure
+                {t('sizeGuide.howToMeasure')}
               </h3>
               
               {/* Size Chart */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between py-3 border-b border-black/10">
-                  <span className="font-body text-black/70">Neck circumference</span>
-                  <span className="font-mono text-black">Around the base of neck</span>
+                  <span className="font-body text-black/70">{t('sizeGuide.measurements.neck.label')}</span>
+                  <span className="font-mono text-black">{t('sizeGuide.measurements.neck.value')}</span>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-black/10">
-                  <span className="font-body text-black/70">Chest girth</span>
-                  <span className="font-mono text-black">Widest part behind front legs</span>
+                  <span className="font-body text-black/70">{t('sizeGuide.measurements.chest.label')}</span>
+                  <span className="font-mono text-black">{t('sizeGuide.measurements.chest.value')}</span>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-black/10">
-                  <span className="font-body text-black/70">Back length</span>
-                  <span className="font-mono text-black">Base of neck to tail base</span>
+                  <span className="font-body text-black/70">{t('sizeGuide.measurements.length.label')}</span>
+                  <span className="font-mono text-black">{t('sizeGuide.measurements.length.value')}</span>
                 </div>
               </div>
 
@@ -153,10 +155,10 @@ const SizeGuide = () => {
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b-2 border-black">
-                      <th className="text-left py-2 font-display font-bold">Size</th>
-                      <th className="text-left py-2 font-display font-bold">Neck</th>
-                      <th className="text-left py-2 font-display font-bold">Chest</th>
-                      <th className="text-left py-2 font-display font-bold">Length</th>
+                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.size')}</th>
+                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.neck')}</th>
+                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.chest')}</th>
+                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.length')}</th>
                     </tr>
                   </thead>
                   <tbody className="font-body">
@@ -216,7 +218,7 @@ const SizeGuide = () => {
               className="fabipets-card p-6 flex-1"
             >
               <h3 className="font-display font-bold text-black text-xl mb-6">
-                Our Promise
+                {t('sizeGuide.ourPromise')}
               </h3>
               <div className="space-y-4">
                 {sizeSteps.map((step, index) => (

@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "collection": "Collection",
+    "custom": "Custom",
+    "lookbook": "Lookbook",
+    "contact": "Contact",
+    "orderWhatsApp": "Order on WhatsApp"
+  },
+  "language": {
+    "toggle": "Change language",
+    "es": "ES",
+    "en": "EN"
+  },
+  "hero": {
+    "headline1": "Designer Fashion",
+    "headline2": "For Pets",
+    "subtitle": "Outfits, costumes & accessories—made to fit your pet.",
+    "cta": "Explore the collection"
+  },
+  "featured": {
+    "label": "Featured Outfit",
+    "title": "STATEMENT SUIT",
+    "description": "Tailored silhouette, breathable lining, and adjustable straps for a perfect fit.",
+    "price": "From $49",
+    "askWhatsApp": "Ask on WhatsApp",
+    "stamp": "NEW"
+  },
+  "collection": {
+    "title": "Shop By Style",
+    "subtitle": "Tap a look to ask availability.",
+    "categories": {
+      "dresses": {
+        "name": "Dresses",
+        "description": "Elegant dresses for special occasions"
+      },
+      "shirts": {
+        "name": "Shirts",
+        "description": "Stylish shirts for everyday wear"
+      },
+      "costumes": {
+        "name": "Costumes",
+        "description": "Fun costumes for celebrations"
+      },
+      "accessories": {
+        "name": "Accessories",
+        "description": "Collars, bow ties & more"
+      }
+    },
+    "viewCollection": "View collection",
+    "explore": "Explore"
+  },
+  "custom": {
+    "label": "Bespoke Service",
+    "title": "CUSTOM DESIGN",
+    "description": "Send a photo + a few details. We will sketch a look and confirm everything before we sew.",
+    "form": {
+      "namePlaceholder": "Your name",
+      "whatsappPlaceholder": "WhatsApp",
+      "petNamePlaceholder": "Pet name & size",
+      "ideaPlaceholder": "Idea / reference",
+      "submit": "Request a sketch",
+      "successMessage": "Thank you! We will contact you soon with a sketch."
+    },
+    "seeExamples": "See examples",
+    "stamp": "1 OF 1"
+  },
+  "sizeGuide": {
+    "title": "Size & Fit",
+    "subtitle": "Finding the perfect fit for your furry friend.",
+    "howToMeasure": "How to Measure",
+    "measurements": {
+      "neck": {
+        "label": "Neck circumference",
+        "value": "Around the base of neck"
+      },
+      "chest": {
+        "label": "Chest girth",
+        "value": "Widest part behind front legs"
+      },
+      "length": {
+        "label": "Back length",
+        "value": "Base of neck to tail base"
+      }
+    },
+    "table": {
+      "size": "Size",
+      "neck": "Neck",
+      "chest": "Chest",
+      "length": "Length"
+    },
+    "ourPromise": "Our Promise",
+    "steps": {
+      "measure": {
+        "title": "Measure",
+        "description": "Measure neck, chest and length"
+      },
+      "adjust": {
+        "title": "Adjust",
+        "description": "Adjustable straps for growing pets"
+      },
+      "returns": {
+        "title": "Returns",
+        "description": "Easy returns if the size is not right"
+      }
+    }
+  },
+  "testimonials": {
+    "quote": "The coat fits like it was made for her—because it was.",
+    "author": "— Luna's human, Carla",
+    "readMore": "Read more reviews",
+    "stamp": "LOVE"
+  },
+  "lookbook": {
+    "title": "Style Moments",
+    "subtitle": "The Fabipets lookbook.",
+    "followInstagram": "Follow @fabipets"
+  },
+  "craft": {
+    "label": "Our Values",
+    "title": "MADE WITH CARE",
+    "values": {
+      "soft": {
+        "title": "Soft, pet-safe fabrics",
+        "description": "Only the gentlest materials for your furry friend"
+      },
+      "stitching": {
+        "title": "Reinforced stitching",
+        "description": "Built to last through all their adventures"
+      },
+      "wash": {
+        "title": "Easy to wash & wear",
+        "description": "Machine washable for your convenience"
+      }
+    },
+    "seeMaterials": "See materials",
+    "stamp": "CARE"
+  },
+  "contact": {
+    "label": "Get in Touch",
+    "title": "LET'S TALK",
+    "description": "Questions? Custom idea? Send a message—we reply fast.",
+    "orderWhatsApp": "Order on WhatsApp",
+    "emailUs": "Email us",
+    "form": {
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "Email",
+      "messagePlaceholder": "Message",
+      "send": "Send",
+      "successMessage": "Thank you for your message! We will get back to you soon."
+    },
+    "followUs": "Follow Us",
+    "footer": {
+      "tagline": "Designer fashion for pets. Made with love.",
+      "copyright": "© {year} Fabipets. All rights reserved."
+    },
+    "stamp": "BYE"
+  },
+  "whatsapp": {
+    "buttonLabel": "Open WhatsApp"
+  }
+}

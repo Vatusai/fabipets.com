@@ -2,10 +2,12 @@ import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Instagram } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Lookbook = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -83,10 +85,10 @@ const Lookbook = () => {
         <div ref={headingRef} className="mb-12 flex items-end justify-between">
           <div>
             <h2 className="font-display font-black text-black text-4xl md:text-6xl uppercase">
-              Style Moments
+              {t('lookbook.title')}
             </h2>
             <p className="font-body text-black/60 mt-4 text-lg">
-              The Fabipets lookbook.
+              {t('lookbook.subtitle')}
             </p>
           </div>
           <a
@@ -96,7 +98,7 @@ const Lookbook = () => {
             className="hidden md:inline-flex items-center gap-2 text-black font-body hover:text-camel transition-colors"
           >
             <Instagram className="w-5 h-5" />
-            Follow @fabipets
+            {t('lookbook.followInstagram')}
           </a>
         </div>
 
@@ -179,7 +181,7 @@ const Lookbook = () => {
           className="md:hidden inline-flex items-center gap-2 text-black font-body hover:text-camel transition-colors mt-8"
         >
           <Instagram className="w-5 h-5" />
-          Follow @fabipets
+          {t('lookbook.followInstagram')}
         </a>
       </div>
     </section>

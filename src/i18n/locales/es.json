@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "collection": "Colección",
+    "custom": "Personalizado",
+    "lookbook": "Lookbook",
+    "contact": "Contacto",
+    "orderWhatsApp": "Pedir por WhatsApp"
+  },
+  "language": {
+    "toggle": "Cambiar idioma",
+    "es": "ES",
+    "en": "EN"
+  },
+  "hero": {
+    "headline1": "Moda de Diseñador",
+    "headline2": "Para Mascotas",
+    "subtitle": "Trajes, disfraces y accesorios—hechos a la medida de tu mascota.",
+    "cta": "Explora la colección"
+  },
+  "featured": {
+    "label": "Conjunto Destacado",
+    "title": "TRAJE ELEGANTE",
+    "description": "Silueta ajustada, forro transpirable y correas ajustables para un calce perfecto.",
+    "price": "Desde $49",
+    "askWhatsApp": "Preguntar por WhatsApp",
+    "stamp": "NUEVO"
+  },
+  "collection": {
+    "title": "Compra por Estilo",
+    "subtitle": "Toca un look para consultar disponibilidad.",
+    "categories": {
+      "dresses": {
+        "name": "Vestidos",
+        "description": "Vestidos elegantes para ocasiones especiales"
+      },
+      "shirts": {
+        "name": "Camisas",
+        "description": "Camisas con estilo para el día a día"
+      },
+      "costumes": {
+        "name": "Disfraces",
+        "description": "Divertidos disfraces para celebraciones"
+      },
+      "accessories": {
+        "name": "Accesorios",
+        "description": "Collares, corbatas de moño y más"
+      }
+    },
+    "viewCollection": "Ver colección",
+    "explore": "Explorar"
+  },
+  "custom": {
+    "label": "Servicio a Medida",
+    "title": "DISEÑO PERSONALIZADO",
+    "description": "Envía una foto + algunos detalles. Haremos un boceto y confirmaremos todo antes de coser.",
+    "form": {
+      "namePlaceholder": "Tu nombre",
+      "whatsappPlaceholder": "WhatsApp",
+      "petNamePlaceholder": "Nombre de la mascota y talla",
+      "ideaPlaceholder": "Idea / referencia",
+      "submit": "Solicitar boceto",
+      "successMessage": "¡Gracias! Te contactaremos pronto con un boceto."
+    },
+    "seeExamples": "Ver ejemplos",
+    "stamp": "1 DE 1"
+  },
+  "sizeGuide": {
+    "title": "Talla y Calce",
+    "subtitle": "Encontrando el calce perfecto para tu amigo peludo.",
+    "howToMeasure": "Cómo Medir",
+    "measurements": {
+      "neck": {
+        "label": "Circunferencia del cuello",
+        "value": "Alrededor de la base del cuello"
+      },
+      "chest": {
+        "label": "Contorno del pecho",
+        "value": "Parte más ancha detrás de las patas delanteras"
+      },
+      "length": {
+        "label": "Largo de espalda",
+        "value": "Base del cuello a la base de la cola"
+      }
+    },
+    "table": {
+      "size": "Talla",
+      "neck": "Cuello",
+      "chest": "Pecho",
+      "length": "Largo"
+    },
+    "ourPromise": "Nuestra Promesa",
+    "steps": {
+      "measure": {
+        "title": "Mide",
+        "description": "Mide cuello, pecho y largo"
+      },
+      "adjust": {
+        "title": "Ajusta",
+        "description": "Correas ajustables para mascotas en crecimiento"
+      },
+      "returns": {
+        "title": "Devoluciones",
+        "description": "Devoluciones fáciles si la talla no es la correcta"
+      }
+    }
+  },
+  "testimonials": {
+    "quote": "El abrigo le queda como si estuviera hecho para ella—porque lo fue.",
+    "author": "— Humano de Luna, Carla",
+    "readMore": "Leer más reseñas",
+    "stamp": "AMOR"
+  },
+  "lookbook": {
+    "title": "Momentos de Estilo",
+    "subtitle": "El lookbook de Fabipets.",
+    "followInstagram": "Seguir @fabipets"
+  },
+  "craft": {
+    "label": "Nuestros Valores",
+    "title": "HECHO CON CUIDADO",
+    "values": {
+      "soft": {
+        "title": "Telas suaves y seguras",
+        "description": "Solo los materiales más suaves para tu amigo peludo"
+      },
+      "stitching": {
+        "title": "Costuras reforzadas",
+        "description": "Construido para durar en todas sus aventuras"
+      },
+      "wash": {
+        "title": "Fácil de lavar y usar",
+        "description": "Lavable a máquina para tu conveniencia"
+      }
+    },
+    "seeMaterials": "Ver materiales",
+    "stamp": "CUIDADO"
+  },
+  "contact": {
+    "label": "Ponte en Contacto",
+    "title": "HABLEMOS",
+    "description": "¿Preguntas? ¿Una idea personalizada? Envía un mensaje—respondemos rápido.",
+    "orderWhatsApp": "Pedir por WhatsApp",
+    "emailUs": "Escríbenos",
+    "form": {
+      "namePlaceholder": "Nombre",
+      "emailPlaceholder": "Email",
+      "messagePlaceholder": "Mensaje",
+      "send": "Enviar",
+      "successMessage": "¡Gracias por tu mensaje! Te responderemos pronto."
+    },
+    "followUs": "Síguenos",
+    "footer": {
+      "tagline": "Moda de diseñador para mascotas. Hecho con amor.",
+      "copyright": "© {year} Fabipets. Todos los derechos reservados."
+    },
+    "stamp": "ADIÓS"
+  },
+  "whatsapp": {
+    "buttonLabel": "Abrir WhatsApp"
+  }
+}

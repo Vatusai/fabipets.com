@@ -2,10 +2,12 @@ import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowUpRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const CollectionGrid = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const card1Ref = useRef<HTMLDivElement>(null);
@@ -15,24 +17,24 @@ const CollectionGrid = () => {
 
   const collections = [
     {
-      name: 'Dresses',
+      name: t('collection.categories.dresses.name'),
       image: '/images/collection_dress.jpg',
-      description: 'Elegant dresses for special occasions',
+      description: t('collection.categories.dresses.description'),
     },
     {
-      name: 'Shirts',
+      name: t('collection.categories.shirts.name'),
       image: '/images/collection_shirt.jpg',
-      description: 'Stylish shirts for everyday wear',
+      description: t('collection.categories.shirts.description'),
     },
     {
-      name: 'Costumes',
+      name: t('collection.categories.costumes.name'),
       image: '/images/collection_costume.jpg',
-      description: 'Fun costumes for celebrations',
+      description: t('collection.categories.costumes.description'),
     },
     {
-      name: 'Accessories',
+      name: t('collection.categories.accessories.name'),
       image: '/images/collection_accessories.jpg',
-      description: 'Collars, bow ties & more',
+      description: t('collection.categories.accessories.description'),
     },
   ];
 
@@ -139,10 +141,10 @@ const CollectionGrid = () => {
         {/* Heading */}
         <div ref={headingRef} className="mb-12">
           <h2 className="font-display font-black text-black text-4xl md:text-6xl uppercase">
-            Shop By Style
+            {t('collection.title')}
           </h2>
           <p className="font-body text-black/60 mt-4 text-lg">
-            Tap a look to ask availability.
+            {t('collection.subtitle')}
           </p>
         </div>
 
@@ -169,7 +171,7 @@ const CollectionGrid = () => {
                     {collections[0].description}
                   </p>
                   <div className="flex items-center gap-2 mt-4 text-white font-body text-sm group-hover:underline">
-                    View collection
+                    {t('collection.viewCollection')}
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -250,7 +252,7 @@ const CollectionGrid = () => {
                     </p>
                   </div>
                   <div className="flex items-center gap-2 text-white font-body text-sm group-hover:underline">
-                    Explore
+                    {t('collection.explore')}
                     <ArrowUpRight className="w-5 h-5" />
                   </div>
                 </div>

@@ -2,10 +2,12 @@ import { useRef, useLayoutEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { MessageCircle, Mail, Send, Instagram, Facebook } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const leftPhotoRef = useRef<HTMLDivElement>(null);
   const rightTopRef = useRef<HTMLDivElement>(null);
@@ -21,7 +23,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
+    alert(t('contact.form.successMessage'));
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -175,13 +177,13 @@ const Contact = () => {
           >
             <div>
               <span className="font-mono text-xs uppercase tracking-widest text-white/80">
-                Get in Touch
+                {t('contact.label')}
               </span>
               <h2 className="font-display font-black text-white text-2xl md:text-3xl mt-4 leading-tight">
-                LET&apos;S TALK
+                {t('contact.title')}
               </h2>
               <p className="font-body text-white/90 text-sm mt-4 leading-relaxed">
-                Questions? Custom idea? Send a message—we reply fast.
+                {t('contact.description')}
               </p>
 
               {/* Primary CTA */}
@@ -192,7 +194,7 @@ const Contact = () => {
                 className="inline-flex items-center gap-2 mt-6 bg-white text-black font-display font-semibold text-sm px-5 py-3 rounded-full hover:bg-black hover:text-white transition-colors duration-300"
               >
                 <MessageCircle className="w-4 h-4" />
-                Order on WhatsApp
+                {t('contact.orderWhatsApp')}
               </a>
 
               {/* Secondary CTA */}
@@ -201,7 +203,7 @@ const Contact = () => {
                 className="inline-flex items-center gap-2 mt-3 text-white font-body text-sm hover:underline"
               >
                 <Mail className="w-4 h-4" />
-                Email us
+                {t('contact.emailUs')}
               </a>
             </div>
 
@@ -209,7 +211,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="mt-8 space-y-3">
               <input
                 type="text"
-                placeholder="Name"
+                placeholder={t('contact.form.namePlaceholder')}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="w-full text-sm bg-white/10 border-white/30 text-white placeholder:text-white/50"
@@ -217,14 +219,14 @@ const Contact = () => {
               />
               <input
                 type="email"
-                placeholder="Email"
+                placeholder={t('contact.form.emailPlaceholder')}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="w-full text-sm bg-white/10 border-white/30 text-white placeholder:text-white/50"
                 required
               />
               <textarea
-                placeholder="Message"
+                placeholder={t('contact.form.messagePlaceholder')}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 className="w-full text-sm bg-white/10 border-white/30 text-white placeholder:text-white/50 resize-none"
@@ -236,14 +238,14 @@ const Contact = () => {
                 className="w-full bg-white text-black font-display font-semibold text-sm px-5 py-3 rounded-full hover:bg-black hover:text-white transition-colors duration-300 flex items-center justify-center gap-2"
               >
                 <Send className="w-4 h-4" />
-                Send
+                {t('contact.form.send')}
               </button>
             </form>
 
             {/* Social Links */}
             <div className="mt-6 pt-6 border-t border-white/20">
               <p className="font-mono text-xs uppercase tracking-widest text-white/60 mb-4">
-                Follow Us
+                {t('contact.followUs')}
               </p>
               <div className="flex items-center gap-4">
                 <a
@@ -280,7 +282,7 @@ const Contact = () => {
             }}
           >
             <span className="font-display font-black text-white text-lg md:text-xl">
-              BYE
+              {t('contact.stamp')}
             </span>
           </div>
         </div>
@@ -293,10 +295,10 @@ const Contact = () => {
             Fabipets<span className="text-camel">.</span>
           </div>
           <p className="font-body text-white/60 text-sm text-center">
-            Designer fashion for pets. Made with love.
+            {t('contact.footer.tagline')}
           </p>
           <p className="font-mono text-white/40 text-xs">
-            © {new Date().getFullYear()} Fabipets. All rights reserved.
+            {t('contact.footer.copyright', { year: new Date().getFullYear() })}
           </p>
         </div>
       </footer>

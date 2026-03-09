@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageToggle from './LanguageToggle';
 
 const Navigation = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -15,10 +18,10 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { label: 'Collection', href: '#collection' },
-    { label: 'Custom', href: '#custom' },
-    { label: 'Lookbook', href: '#lookbook' },
-    { label: 'Contact', href: '#contact' },
+    { label: t('nav.collection'), href: '#collection' },
+    { label: t('nav.custom'), href: '#custom' },
+    { label: t('nav.lookbook'), href: '#lookbook' },
+    { label: t('nav.contact'), href: '#contact' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -62,13 +65,14 @@ const Navigation = () => {
                 {link.label}
               </button>
             ))}
+            <LanguageToggle />
             <a
               href="https://api.whatsapp.com/send/?phone=584142490629&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm"
             >
-              Order on WhatsApp
+              {t('nav.orderWhatsApp')}
             </a>
           </div>
 
@@ -98,13 +102,14 @@ const Navigation = () => {
               {link.label}
             </button>
           ))}
+          <LanguageToggle />
           <a
             href="https://api.whatsapp.com/send/?phone=584142490629&text&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary mt-4"
           >
-            Order on WhatsApp
+            {t('nav.orderWhatsApp')}
           </a>
         </div>
       </div>

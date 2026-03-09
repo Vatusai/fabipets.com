@@ -2,10 +2,12 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Quote, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const leftPhotoRef = useRef<HTMLDivElement>(null);
   const rightTopRef = useRef<HTMLDivElement>(null);
@@ -147,10 +149,10 @@ const Testimonials = () => {
             <div>
               <Quote className="w-8 h-8 text-white/40 mb-4" />
               <blockquote className="font-body text-white text-lg md:text-xl leading-relaxed">
-                &ldquo;The coat fits like it was made for her—because it was.&rdquo;
+                &ldquo;{t('testimonials.quote')}&rdquo;
               </blockquote>
               <p className="font-mono text-white/80 text-sm mt-6">
-                — Luna&apos;s human, Carla
+                {t('testimonials.author')}
               </p>
             </div>
 
@@ -158,7 +160,7 @@ const Testimonials = () => {
               href="#"
               className="inline-flex items-center gap-2 text-white font-body text-sm hover:underline mt-6"
             >
-              Read more reviews
+              {t('testimonials.readMore')}
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -176,7 +178,7 @@ const Testimonials = () => {
           }}
         >
           <span className="font-display font-black text-white text-lg">
-            LOVE
+            {t('testimonials.stamp')}
           </span>
         </div>
       </div>

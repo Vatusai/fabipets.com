@@ -2,10 +2,12 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { MessageCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FeaturedOutfit = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const leftPhotoRef = useRef<HTMLDivElement>(null);
   const rightTopRef = useRef<HTMLDivElement>(null);
@@ -147,19 +149,19 @@ const FeaturedOutfit = () => {
           >
             <div>
               <span className="font-mono text-xs uppercase tracking-widest text-white/80">
-                Featured Outfit
+                {t('featured.label')}
               </span>
               <h2 className="font-display font-black text-white text-2xl md:text-3xl mt-4 leading-tight">
-                STATEMENT SUIT
+                {t('featured.title')}
               </h2>
               <p className="font-body text-white/90 text-sm mt-4 leading-relaxed">
-                Tailored silhouette, breathable lining, and adjustable straps for a perfect fit.
+                {t('featured.description')}
               </p>
             </div>
 
             <div className="mt-6">
               <p className="font-display font-bold text-white text-xl md:text-2xl">
-                From $49
+                {t('featured.price')}
               </p>
               <a
                 href="https://api.whatsapp.com/send/?phone=584142490629&text&type=phone_number&app_absent=0"
@@ -168,7 +170,7 @@ const FeaturedOutfit = () => {
                 className="inline-flex items-center gap-2 mt-4 bg-white text-black font-display font-semibold text-sm px-5 py-3 rounded-full hover:bg-black hover:text-white transition-colors duration-300"
               >
                 <MessageCircle className="w-4 h-4" />
-                Ask on WhatsApp
+                {t('featured.askWhatsApp')}
               </a>
             </div>
           </div>
@@ -186,7 +188,7 @@ const FeaturedOutfit = () => {
           }}
         >
           <span className="font-display font-black text-white text-lg">
-            NEW
+            {t('featured.stamp')}
           </span>
         </div>
       </div>

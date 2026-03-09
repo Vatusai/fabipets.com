@@ -2,10 +2,12 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Heart, Shield, Sparkles, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const CraftCare = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const leftPhotoRef = useRef<HTMLDivElement>(null);
   const rightTopRef = useRef<HTMLDivElement>(null);
@@ -16,18 +18,18 @@ const CraftCare = () => {
   const values = [
     {
       icon: Heart,
-      title: 'Soft, pet-safe fabrics',
-      description: 'Only the gentlest materials for your furry friend',
+      title: t('craft.values.soft.title'),
+      description: t('craft.values.soft.description'),
     },
     {
       icon: Shield,
-      title: 'Reinforced stitching',
-      description: 'Built to last through all their adventures',
+      title: t('craft.values.stitching.title'),
+      description: t('craft.values.stitching.description'),
     },
     {
       icon: Sparkles,
-      title: 'Easy to wash & wear',
-      description: 'Machine washable for your convenience',
+      title: t('craft.values.wash.title'),
+      description: t('craft.values.wash.description'),
     },
   ];
 
@@ -164,10 +166,10 @@ const CraftCare = () => {
           >
             <div>
               <span className="font-mono text-xs uppercase tracking-widest text-white/80">
-                Our Values
+                {t('craft.label')}
               </span>
               <h2 className="font-display font-black text-white text-xl md:text-2xl mt-3 leading-tight">
-                MADE WITH CARE
+                {t('craft.title')}
               </h2>
 
               <div className="mt-6 space-y-4">
@@ -193,7 +195,7 @@ const CraftCare = () => {
               href="#"
               className="inline-flex items-center gap-2 text-white font-body text-sm hover:underline mt-6"
             >
-              See materials
+              {t('craft.seeMaterials')}
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -211,7 +213,7 @@ const CraftCare = () => {
           }}
         >
           <span className="font-display font-black text-white text-lg">
-            CARE
+            {t('craft.stamp')}
           </span>
         </div>
       </div>

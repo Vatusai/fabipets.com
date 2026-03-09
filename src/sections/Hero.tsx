@@ -2,10 +2,12 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const frameRef = useRef<HTMLDivElement>(null);
   const imagesRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -274,9 +276,9 @@ const Hero = () => {
             fontSize: 'clamp(32px, 5vw, 72px)',
           }}
         >
-          <div>Designer Fashion</div>
+          <div>{t('hero.headline1')}</div>
           <div>
-            For Pets<span className="text-camel">.</span>
+            {t('hero.headline2')}<span className="text-camel">.</span>
           </div>
         </div>
 
@@ -289,7 +291,7 @@ const Hero = () => {
             bottom: '5vh',
           }}
         >
-          Outfits, costumes & accessories—made to fit your pet.
+          {t('hero.subtitle')}
         </p>
 
         {/* CTA Button */}
@@ -306,7 +308,7 @@ const Hero = () => {
             bottom: '7vh',
           }}
         >
-          Explore the collection
+          {t('hero.cta')}
           <ArrowRight className="w-4 h-4" />
         </a>
       </div>

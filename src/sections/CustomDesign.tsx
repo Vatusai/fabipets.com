@@ -2,10 +2,12 @@ import { useRef, useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Send, Eye } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const CustomDesign = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const leftPhotoRef = useRef<HTMLDivElement>(null);
   const rightTopRef = useRef<HTMLDivElement>(null);
@@ -22,7 +24,7 @@ const CustomDesign = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you! We will contact you soon with a sketch.');
+    alert(t('custom.form.successMessage'));
     setFormData({ name: '', whatsapp: '', petName: '', idea: '' });
   };
 
@@ -160,20 +162,20 @@ const CustomDesign = () => {
           >
             <div>
               <span className="font-mono text-xs uppercase tracking-widest text-black/60">
-                Bespoke Service
+                {t('custom.label')}
               </span>
               <h2 className="font-display font-black text-black text-xl md:text-2xl mt-3 leading-tight">
-                CUSTOM DESIGN
+                {t('custom.title')}
               </h2>
               <p className="font-body text-black/70 text-sm mt-3 leading-relaxed">
-                Send a photo + a few details. We will sketch a look and confirm everything before we sew.
+                {t('custom.description')}
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="flex-1 flex flex-col mt-6 gap-3">
               <input
                 type="text"
-                placeholder="Your name"
+                placeholder={t('custom.form.namePlaceholder')}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="w-full text-sm"
@@ -181,7 +183,7 @@ const CustomDesign = () => {
               />
               <input
                 type="tel"
-                placeholder="WhatsApp"
+                placeholder={t('custom.form.whatsappPlaceholder')}
                 value={formData.whatsapp}
                 onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
                 className="w-full text-sm"
@@ -189,14 +191,14 @@ const CustomDesign = () => {
               />
               <input
                 type="text"
-                placeholder="Pet name & size"
+                placeholder={t('custom.form.petNamePlaceholder')}
                 value={formData.petName}
                 onChange={(e) => setFormData({ ...formData, petName: e.target.value })}
                 className="w-full text-sm"
                 required
               />
               <textarea
-                placeholder="Idea / reference"
+                placeholder={t('custom.form.ideaPlaceholder')}
                 value={formData.idea}
                 onChange={(e) => setFormData({ ...formData, idea: e.target.value })}
                 className="w-full text-sm flex-1 resize-none"
@@ -207,7 +209,7 @@ const CustomDesign = () => {
                 className="w-full btn-primary flex items-center justify-center gap-2 text-sm"
               >
                 <Send className="w-4 h-4" />
-                Request a sketch
+                {t('custom.form.submit')}
               </button>
             </form>
 
@@ -216,7 +218,7 @@ const CustomDesign = () => {
               className="inline-flex items-center gap-2 mt-4 text-black/70 font-body text-sm hover:text-camel transition-colors"
             >
               <Eye className="w-4 h-4" />
-              See examples
+              {t('custom.seeExamples')}
             </a>
           </div>
         </div>
@@ -233,7 +235,7 @@ const CustomDesign = () => {
           }}
         >
           <span className="font-display font-black text-white text-sm text-center leading-tight">
-            1 OF 1
+            {t('custom.stamp')}
           </span>
         </div>
       </div>
