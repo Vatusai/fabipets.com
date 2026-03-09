@@ -63,7 +63,7 @@ const Navigation = () => {
               </button>
             ))}
             <a
-              href="https://wa.me/1234567890"
+              href="https://api.whatsapp.com/send/?phone=584142490629&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm"
@@ -99,7 +99,7 @@ const Navigation = () => {
             </button>
           ))}
           <a
-            href="https://wa.me/1234567890"
+            href="https://api.whatsapp.com/send/?phone=584142490629&text&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary mt-4"

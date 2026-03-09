@@ -298,7 +298,7 @@ interface SiteConfig { ... }
 
 **Datos hardcodeados en el código (no en config.ts):**
 - Número WhatsApp: `https://wa.me/1234567890`
-- Email contacto: `hello@fabipets.com`
+- Email contacto: `info@fabipets.com`
 - Links sociales: Instagram, Facebook
 
 ---
@@ -588,13 +588,13 @@ Todas las imágenes están en `app/public/images/` y se referencian con rutas ab
 | Ubicación | Valor actual | Variable recomendada |
 |-----------|-------------|----------------------|
 | `Navigation.tsx`, `WhatsAppButton.tsx` | `https://wa.me/1234567890` | `VITE_WHATSAPP_PHONE` |
-| `Contact.tsx` | `hello@fabipets.com` | `VITE_CONTACT_EMAIL` |
+| `Contact.tsx` | `info@fabipets.com` | `VITE_CONTACT_EMAIL` |
 | `Contact.tsx` | Links Instagram/Facebook | `VITE_INSTAGRAM_URL`, `VITE_FACEBOOK_URL` |
 
 ### `.env.example` recomendado
 ```env
 VITE_WHATSAPP_PHONE=+1234567890
-VITE_CONTACT_EMAIL=hello@fabipets.com
+VITE_CONTACT_EMAIL=info@fabipets.com
 VITE_INSTAGRAM_URL=https://instagram.com/fabipets
 VITE_FACEBOOK_URL=https://facebook.com/fabipets
 VITE_SITE_URL=https://fabipets.com
@@ -722,7 +722,7 @@ Los formularios actuales no envían datos. Para producción integrar:
 ### Pendiente / Mejoras recomendadas ⚠️
 - [ ] Conectar formularios a un backend o servicio de email
 - [ ] Reemplazar número WhatsApp hardcodeado (`wa.me/1234567890`) con el real
-- [ ] Reemplazar email hardcodeado (`hello@fabipets.com`) con el real
+- [ ] Reemplazar email hardcodeado (`info@fabipets.com`) con el real
 - [ ] Completar secciones `ProductShowcase`, `ColorPalette` y `Finale` (config vacía)
 - [ ] Agregar `README.md` en la raíz del proyecto
 - [ ] Configurar variables de entorno para datos de contacto

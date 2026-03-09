@@ -162,7 +162,7 @@ const FeaturedOutfit = () => {
                 From $49
               </p>
               <a
-                href="https://wa.me/1234567890"
+                href="https://api.whatsapp.com/send/?phone=584142490629&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-4 bg-white text-black font-display font-semibold text-sm px-5 py-3 rounded-full hover:bg-black hover:text-white transition-colors duration-300"
