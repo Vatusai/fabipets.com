@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    /* Fabipets Color Palette - Soft Pastel */
-    --background: 350 60% 90%; /* #F6B7C1 soft blush pink */
+    /* Fabipets Color Palette - Lilac Purple */
+    --background: 260 60% 75%; /* #9C7EE0 lilac */
     --foreground: 0 0% 7%; /* #111111 */
     --card: 0 0% 100%;
     --card-foreground: 0 0% 7%;
@@ -53,8 +53,10 @@
     @apply antialiased;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
-    background-color: var(--blush);
+    background-color: #9C7EE0;
+    background-image: linear-gradient(to top, #5B4D8F, #9C7EE0);
     color: var(--black);
+    min-height: 100vh;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -159,7 +161,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--blush);
+  background: #9C7EE0;
 }
 
 ::-webkit-scrollbar-thumb {
