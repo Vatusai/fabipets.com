@@ -18,22 +18,22 @@ const CollectionGrid = () => {
   const collections = [
     {
       name: t('collection.categories.dresses.name'),
-      image: '/images/collection_dress.jpg',
+      image: '/images/new_image_10.jpg',
       description: t('collection.categories.dresses.description'),
     },
     {
       name: t('collection.categories.shirts.name'),
-      image: '/images/collection_shirt.jpg',
+      image: '/images/new_image_11.jpg',
       description: t('collection.categories.shirts.description'),
     },
     {
       name: t('collection.categories.costumes.name'),
-      image: '/images/collection_costume.jpg',
+      image: '/images/new_image_12.jpg',
       description: t('collection.categories.costumes.description'),
     },
     {
       name: t('collection.categories.accessories.name'),
-      image: '/images/collection_accessories.jpg',
+      image: '/images/new_image_13.jpg',
       description: t('collection.categories.accessories.description'),
     },
   ];

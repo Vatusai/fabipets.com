@@ -13,11 +13,11 @@ const Lookbook = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   const lookbookImages = [
-    { src: '/images/lookbook_01.jpg', alt: 'Style moment 1', span: 'row-span-2' },
-    { src: '/images/lookbook_02.jpg', alt: 'Style moment 2', span: '' },
-    { src: '/images/lookbook_03.jpg', alt: 'Style moment 3', span: '' },
-    { src: '/images/lookbook_04.jpg', alt: 'Style moment 4', span: '' },
-    { src: '/images/lookbook_05.jpg', alt: 'Style moment 5', span: 'row-span-2' },
+    { src: '/images/new_image_21.jpg', alt: 'Style moment 1', span: 'row-span-2' },
+    { src: '/images/new_image_22.jpg', alt: 'Style moment 2', span: '' },
+    { src: '/images/new_image_23.jpg', alt: 'Style moment 3', span: '' },
+    { src: '/images/new_image_24.jpg', alt: 'Style moment 4', span: '' },
+    { src: '/images/new_image_25.jpg', alt: 'Style moment 5', span: 'row-span-2' },
   ];
 
   useLayoutEffect(() => {

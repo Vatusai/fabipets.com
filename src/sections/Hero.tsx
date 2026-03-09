@@ -169,7 +169,7 @@ const Hero = () => {
             }}
           >
             <img
-              src="/images/hero_dog_flowers.jpg"
+              src="/images/new_image_01.jpg"
               alt="Dog with flower crown"
               className="w-full h-full object-cover"
             />
@@ -187,7 +187,7 @@ const Hero = () => {
             }}
           >
             <img
-              src="/images/hero_cat_pink.jpg"
+              src="/images/new_image_02.jpg"
               alt="Elegant cat"
               className="w-full h-full object-cover"
             />
@@ -205,7 +205,7 @@ const Hero = () => {
             }}
           >
             <img
-              src="/images/hero_dog_costume.jpg"
+              src="/images/new_image_03.jpg"
               alt="Dog in costume"
               className="w-full h-full object-cover"
             />
@@ -223,7 +223,7 @@ const Hero = () => {
             }}
           >
             <img
-              src="/images/hero_dog_bow.jpg"
+              src="/images/new_image_04.jpg"
               alt="Dog with bow tie"
               className="w-full h-full object-cover"
             />
@@ -241,7 +241,7 @@ const Hero = () => {
             }}
           >
             <img
-              src="/images/hero_dog_sunglasses.jpg"
+              src="/images/new_image_05.jpg"
               alt="Dog with sunglasses"
               className="w-full h-full object-cover"
             />
@@ -259,7 +259,7 @@ const Hero = () => {
             }}
           >
             <img
-              src="/images/hero_paws_closeup.jpg"
+              src="/images/new_image_06.jpg"
               alt="Pet paws closeup"
               className="w-full h-full object-cover"
             />

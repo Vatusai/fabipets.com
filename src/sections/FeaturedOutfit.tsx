@@ -104,7 +104,7 @@ const FeaturedOutfit = () => {
           >
             <div className="aspect-[4/5] p-2">
               <img
-                src="/images/featured_suit_main.jpg"
+                src="/images/new_image_07.jpg"
                 alt="Statement Suit"
                 className="w-full h-full object-cover rounded-[20px]"
               />
@@ -120,7 +120,7 @@ const FeaturedOutfit = () => {
             >
               <div className="aspect-square p-2">
                 <img
-                  src="/images/featured_suit_detail.jpg"
+                  src="/images/new_image_08.jpg"
                   alt="Suit detail"
                   className="w-full h-full object-cover rounded-[14px]"
                 />
@@ -134,7 +134,7 @@ const FeaturedOutfit = () => {
             >
               <div className="aspect-[4/5] p-2">
                 <img
-                  src="/images/collection_accessories.jpg"
+                  src="/images/new_image_09.jpg"
                   alt="Accessories"
                   className="w-full h-full object-cover rounded-[14px]"
                 />

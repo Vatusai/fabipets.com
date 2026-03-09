@@ -206,7 +206,7 @@ const SizeGuide = () => {
               className="fabipets-card-sm overflow-hidden"
             >
               <img
-                src="/images/size_guide_photo.jpg"
+                src="/images/new_image_17.jpg"
                 alt="Size guide demonstration"
                 className="w-full h-48 md:h-56 object-cover p-2 rounded-[18px]"
               />

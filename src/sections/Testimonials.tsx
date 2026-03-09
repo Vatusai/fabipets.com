@@ -103,7 +103,7 @@ const Testimonials = () => {
           >
             <div className="aspect-[4/5] p-2">
               <img
-                src="/images/testimonial_main.jpg"
+                src="/images/new_image_18.jpg"
                 alt="Happy customer"
                 className="w-full h-full object-cover rounded-[20px]"
               />
@@ -119,7 +119,7 @@ const Testimonials = () => {
             >
               <div className="aspect-square p-2">
                 <img
-                  src="/images/testimonial_small.jpg"
+                  src="/images/new_image_19.jpg"
                   alt="Another happy pet"
                   className="w-full h-full object-cover rounded-[14px]"
                 />
@@ -133,7 +133,7 @@ const Testimonials = () => {
             >
               <div className="aspect-[4/5] p-2">
                 <img
-                  src="/images/lookbook_03.jpg"
+                  src="/images/new_image_20.jpg"
                   alt="Pet in outfit"
                   className="w-full h-full object-cover rounded-[14px]"
                 />
