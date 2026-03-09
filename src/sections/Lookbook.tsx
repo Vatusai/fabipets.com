@@ -92,7 +92,7 @@ const Lookbook = () => {
             </p>
           </div>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/fabi_pets_?igsh=NXQ1YTFydmh2YWsx"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 text-black font-body hover:text-camel transition-colors"
@@ -175,7 +175,7 @@ const Lookbook = () => {
 
         {/* Mobile Instagram Link */}
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/fabi_pets_?igsh=NXQ1YTFydmh2YWsx"
           target="_blank"
           rel="noopener noreferrer"
           className="md:hidden inline-flex items-center gap-2 text-black font-body hover:text-camel transition-colors mt-8"
