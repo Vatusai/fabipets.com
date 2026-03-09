@@ -13,7 +13,7 @@ const Lookbook = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   const lookbookImages = [
-    { src: '/images/new_image_21.jpg', alt: 'Style moment 1', span: 'row-span-2' },
+    { src: '/images/new_image_28.png', alt: 'Style moment 1', span: 'row-span-2' },
     { src: '/images/new_image_22.jpg', alt: 'Style moment 2', span: '' },
     { src: '/images/new_image_23.jpg', alt: 'Style moment 3', span: '' },
     { src: '/images/new_image_24.jpg', alt: 'Style moment 4', span: '' },

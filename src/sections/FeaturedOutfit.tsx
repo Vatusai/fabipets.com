@@ -104,7 +104,7 @@ const FeaturedOutfit = () => {
           >
             <div className="aspect-[4/5] p-2">
               <img
-                src="/images/new_image_07.jpg"
+                src="/images/new_image_07.png"
                 alt="Statement Suit"
                 className="w-full h-full object-cover rounded-[20px]"
               />

@@ -18,10 +18,9 @@
     "cta": "Explora la colección"
   },
   "featured": {
-    "label": "Conjunto Destacado",
-    "title": "TRAJE ELEGANTE",
-    "description": "Silueta ajustada, forro transpirable y correas ajustables para un calce perfecto.",
-    "price": "Desde $49",
+    "label": "Lo más vendido",
+    "title": "OCASIÓN ELEGANTE",
+    "description": "Trajes ajustables, camisas y collares ideales para esa ocasión especial.",
     "askWhatsApp": "Preguntar por WhatsApp",
     "stamp": "NUEVO"
   },
@@ -31,7 +30,7 @@
     "categories": {
       "dresses": {
         "name": "Vestidos",
-        "description": "Vestidos elegantes para ocasiones especiales"
+        "description": "Para las consentidas de la casa"
       },
       "shirts": {
         "name": "Camisas",
@@ -50,9 +49,9 @@
     "explore": "Explorar"
   },
   "custom": {
-    "label": "Servicio a Medida",
-    "title": "DISEÑO PERSONALIZADO",
-    "description": "Envía una foto + algunos detalles. Haremos un boceto y confirmaremos todo antes de coser.",
+    "label": "¡Viste a tu mejor amigo con estilo!",
+    "title": "DISEÑOS A LA MODA",
+    "description": "¿Te gustaría conocer nuestras últimas colecciones?\nEnvíanos un mensaje junto con una foto de tu mascota y te compartiremos toda la información.",
     "form": {
       "namePlaceholder": "Tu nombre",
       "whatsappPlaceholder": "WhatsApp",

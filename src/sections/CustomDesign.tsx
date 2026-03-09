@@ -117,7 +117,7 @@ const CustomDesign = () => {
           >
             <div className="aspect-[4/5] p-2">
               <img
-                src="/images/new_image_14.jpg"
+                src="/images/new_image_14.png"
                 alt="Custom fit design"
                 className="w-full h-full object-cover rounded-[20px]"
               />
@@ -147,7 +147,7 @@ const CustomDesign = () => {
             >
               <div className="aspect-[4/5] p-2">
                 <img
-                  src="/images/new_image_16.jpg"
+                  src="/images/new_image_16.JPG"
                   alt="Size guide"
                   className="w-full h-full object-cover rounded-[14px]"
                 />

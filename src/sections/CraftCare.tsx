@@ -137,7 +137,7 @@ const CraftCare = () => {
             >
               <div className="aspect-square p-2">
                 <img
-                  src="/images/new_image_01.jpg"
+                  src="/images/new_image_01.png"
                   alt="Craft detail"
                   className="w-full h-full object-cover rounded-[14px]"
                 />
@@ -151,7 +151,7 @@ const CraftCare = () => {
             >
               <div className="aspect-[4/5] p-2">
                 <img
-                  src="/images/new_image_02.jpg"
+                  src="/images/new_image_02.png"
                   alt="Pet in outfit"
                   className="w-full h-full object-cover rounded-[14px]"
                 />

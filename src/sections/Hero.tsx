@@ -169,7 +169,7 @@ const Hero = () => {
             }}
           >
             <img
-              src="/images/new_image_01.jpg"
+              src="/images/new_image_01.png"
               alt="Dog with flower crown"
               className="w-full h-full object-cover"
             />
@@ -187,7 +187,7 @@ const Hero = () => {
             }}
           >
             <img
-              src="/images/new_image_02.jpg"
+              src="/images/new_image_02.png"
               alt="Elegant cat"
               className="w-full h-full object-cover"
             />
@@ -259,7 +259,7 @@ const Hero = () => {
             }}
           >
             <img
-              src="/images/new_image_06.jpg"
+              src="/images/new_image_06.JPG"
               alt="Pet paws closeup"
               className="w-full h-full object-cover"
             />
