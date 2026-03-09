@@ -259,7 +259,7 @@ const Hero = () => {
             }}
           >
             <img
-              src="/images/new_image_06.JPG"
+              src="/images/new_image_06.jpg"
               alt="Pet paws closeup"
               className="w-full h-full object-cover"
             />

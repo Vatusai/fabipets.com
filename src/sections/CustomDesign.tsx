@@ -147,7 +147,7 @@ const CustomDesign = () => {
             >
               <div className="aspect-[4/5] p-2">
                 <img
-                  src="/images/new_image_16.JPG"
+                  src="/images/new_image_16.jpg"
                   alt="Size guide"
                   className="w-full h-full object-cover rounded-[14px]"
                 />
