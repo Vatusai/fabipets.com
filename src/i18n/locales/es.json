@@ -12,15 +12,16 @@
     "en": "EN"
   },
   "hero": {
-    "headline1": "Moda de Diseñador",
-    "headline2": "Para Mascotas",
-    "subtitle": "Trajes, disfraces y accesorios—hechos a la medida de tu mascota.",
+    "headline1": "Moda y estilo para tu mascota",
+    "headline2": "",
+    "subtitle": "Trajes, vestidos, disfraces y mucho más.",
     "cta": "Explora la colección"
   },
   "featured": {
     "label": "Lo más vendido",
     "title": "OCASIÓN ELEGANTE",
     "description": "Trajes ajustables, camisas y collares ideales para esa ocasión especial.",
+    "price": "A partir de $5",
     "askWhatsApp": "Preguntar por WhatsApp",
     "stamp": "NUEVO"
   },
@@ -64,8 +65,8 @@
     "stamp": "1 DE 1"
   },
   "sizeGuide": {
-    "title": "Talla y Calce",
-    "subtitle": "Encontrando el calce perfecto para tu amigo peludo.",
+    "title": "¿No sabes la talla de tu mascota?",
+    "subtitle": "No te preocupes, aquí te explicamos.",
     "howToMeasure": "Cómo Medir",
     "measurements": {
       "neck": {
@@ -90,16 +91,20 @@
     "ourPromise": "Nuestra Promesa",
     "steps": {
       "measure": {
-        "title": "Mide",
-        "description": "Mide cuello, pecho y largo"
+        "title": "Tiempo de entrega",
+        "description": "Recibe el outfit de tu mascota en un máximo de 4 días."
       },
       "adjust": {
-        "title": "Ajusta",
-        "description": "Correas ajustables para mascotas en crecimiento"
+        "title": "Trajes ajustables",
+        "description": "Perfecto para las mascotas en crecimiento."
       },
       "returns": {
         "title": "Devoluciones",
-        "description": "Devoluciones fáciles si la talla no es la correcta"
+        "description": "Devoluciones fáciles si la talla no es la correcta."
+      },
+      "shipping": {
+        "title": "Envíos",
+        "description": "Envíos a nivel nacional e internacional."
       }
     }
   },
@@ -149,7 +154,7 @@
     },
     "followUs": "Síguenos",
     "footer": {
-      "tagline": "Moda de diseñador para mascotas. Hecho con amor.",
+      "tagline": "Moda y estilo para tu mascota.",
       "copyright": "© {year} Fabipets. Todos los derechos reservados."
     },
     "stamp": "ADIÓS"

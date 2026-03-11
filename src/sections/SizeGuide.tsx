@@ -1,7 +1,7 @@
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Ruler, Check, RefreshCw } from 'lucide-react';
+import { Ruler, Check, RefreshCw, Truck } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -29,6 +29,11 @@ const SizeGuide = () => {
       icon: RefreshCw,
       title: t('sizeGuide.steps.returns.title'),
       description: t('sizeGuide.steps.returns.description'),
+    },
+    {
+      icon: Truck,
+      title: t('sizeGuide.steps.shipping.title'),
+      description: t('sizeGuide.steps.shipping.description'),
     },
   ];
 
