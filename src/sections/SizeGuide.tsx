@@ -1,7 +1,7 @@
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Ruler, Check, RefreshCw, Truck } from 'lucide-react';
+import { Clock, Check, RefreshCw, Truck } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,13 +10,12 @@ const SizeGuide = () => {
   const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
-  const leftCardRef = useRef<HTMLDivElement>(null);
-  const rightTopRef = useRef<HTMLDivElement>(null);
-  const rightBottomRef = useRef<HTMLDivElement>(null);
+  const imagesGridRef = useRef<HTMLDivElement>(null);
+  const infoCardRef = useRef<HTMLDivElement>(null);
 
   const sizeSteps = [
     {
-      icon: Ruler,
+      icon: Clock,
       title: t('sizeGuide.steps.measure.title'),
       description: t('sizeGuide.steps.measure.description'),
     },
@@ -35,6 +34,14 @@ const SizeGuide = () => {
       title: t('sizeGuide.steps.shipping.title'),
       description: t('sizeGuide.steps.shipping.description'),
     },
+  ];
+
+  // Array de imágenes de tallas ordenadas numéricamente
+  const sizeImages = [
+    { src: '/images/size-1.JPG', alt: 'Guía de tallas 1' },
+    { src: '/images/size-2.JPG', alt: 'Guía de tallas 2' },
+    { src: '/images/size-3.JPG', alt: 'Guía de tallas 3' },
+    { src: '/images/size-4.JPG', alt: 'Guía de tallas 4' },
   ];
 
   useLayoutEffect(() => {
@@ -59,15 +66,15 @@ const SizeGuide = () => {
       );
 
       gsap.fromTo(
-        leftCardRef.current,
-        { x: '-12vw', opacity: 0 },
+        imagesGridRef.current,
+        { y: 40, opacity: 0 },
         {
-          x: 0,
+          y: 0,
           opacity: 1,
           duration: 0.8,
           ease: 'power2.out',
           scrollTrigger: {
-            trigger: leftCardRef.current,
+            trigger: imagesGridRef.current,
             start: 'top 80%',
             toggleActions: 'play none none reverse',
           },
@@ -75,7 +82,7 @@ const SizeGuide = () => {
       );
 
       gsap.fromTo(
-        rightTopRef.current,
+        infoCardRef.current,
         { x: '12vw', opacity: 0 },
         {
           x: 0,
@@ -83,24 +90,7 @@ const SizeGuide = () => {
           duration: 0.8,
           ease: 'power2.out',
           scrollTrigger: {
-            trigger: rightTopRef.current,
-            start: 'top 80%',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      );
-
-      gsap.fromTo(
-        rightBottomRef.current,
-        { x: '12vw', y: '6vh', opacity: 0 },
-        {
-          x: 0,
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: rightBottomRef.current,
+            trigger: infoCardRef.current,
             start: 'top 80%',
             toggleActions: 'play none none reverse',
           },
@@ -129,97 +119,40 @@ const SizeGuide = () => {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          {/* Left Size Guide Card */}
+          {/* Left - Size Guide Images */}
           <div
-            ref={leftCardRef}
-            className="md:col-span-6"
+            ref={imagesGridRef}
+            className="md:col-span-7"
           >
-            <div className="fabipets-card p-6 md:p-8 h-full">
+            <div className="fabipets-card p-4 md:p-6 h-full">
               <h3 className="font-display font-bold text-black text-xl mb-6">
                 {t('sizeGuide.howToMeasure')}
               </h3>
               
-              {/* Size Chart */}
-              <div className="space-y-4">
-                <div className="flex items-center justify-between py-3 border-b border-black/10">
-                  <span className="font-body text-black/70">{t('sizeGuide.measurements.neck.label')}</span>
-                  <span className="font-mono text-black">{t('sizeGuide.measurements.neck.value')}</span>
-                </div>
-                <div className="flex items-center justify-between py-3 border-b border-black/10">
-                  <span className="font-body text-black/70">{t('sizeGuide.measurements.chest.label')}</span>
-                  <span className="font-mono text-black">{t('sizeGuide.measurements.chest.value')}</span>
-                </div>
-                <div className="flex items-center justify-between py-3 border-b border-black/10">
-                  <span className="font-body text-black/70">{t('sizeGuide.measurements.length.label')}</span>
-                  <span className="font-mono text-black">{t('sizeGuide.measurements.length.value')}</span>
-                </div>
-              </div>
-
-              {/* Size Table */}
-              <div className="mt-8 overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b-2 border-black">
-                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.size')}</th>
-                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.neck')}</th>
-                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.chest')}</th>
-                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.length')}</th>
-                    </tr>
-                  </thead>
-                  <tbody className="font-body">
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">XS</td>
-                      <td className="py-2">20-25cm</td>
-                      <td className="py-2">30-35cm</td>
-                      <td className="py-2">20-25cm</td>
-                    </tr>
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">S</td>
-                      <td className="py-2">25-30cm</td>
-                      <td className="py-2">35-45cm</td>
-                      <td className="py-2">25-30cm</td>
-                    </tr>
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">M</td>
-                      <td className="py-2">30-35cm</td>
-                      <td className="py-2">45-55cm</td>
-                      <td className="py-2">30-35cm</td>
-                    </tr>
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">L</td>
-                      <td className="py-2">35-45cm</td>
-                      <td className="py-2">55-70cm</td>
-                      <td className="py-2">35-45cm</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2">XL</td>
-                      <td className="py-2">45-55cm</td>
-                      <td className="py-2">70-85cm</td>
-                      <td className="py-2">45-55cm</td>
-                    </tr>
-                  </tbody>
-                </table>
+              {/* Images Grid - 2x2 layout */}
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
+                {sizeImages.map((image, index) => (
+                  <div 
+                    key={index}
+                    className="relative overflow-hidden rounded-xl bg-white"
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-auto object-contain rounded-xl"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="md:col-span-6 flex flex-col gap-6">
-            {/* Right Top - Image */}
+          {/* Right Column - Info Cards */}
+          <div className="md:col-span-5 flex flex-col gap-6">
+            {/* Info Card */}
             <div
-              ref={rightTopRef}
-              className="fabipets-card-sm overflow-hidden"
-            >
-              <img
-                src="/images/new_image_17.jpg"
-                alt="Size guide demonstration"
-                className="w-full h-48 md:h-56 object-cover p-2 rounded-[18px]"
-              />
-            </div>
-
-            {/* Right Bottom - Info Cards */}
-            <div
-              ref={rightBottomRef}
+              ref={infoCardRef}
               className="fabipets-card p-6 flex-1"
             >
               <h3 className="font-display font-bold text-black text-xl mb-6">
