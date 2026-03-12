@@ -121,7 +121,7 @@ const Contact = () => {
             }}
           >
             <img
-              src="/images/new_image_03.jpg"
+              src="/images/new_image_02.png"
               alt="Contact us"
               className="w-full h-full object-cover p-2.5 rounded-[28px]"
             />
@@ -139,7 +139,7 @@ const Contact = () => {
             }}
           >
             <img
-              src="/images/new_image_04.jpg"
+              src="/images/new_image_03.jpg"
               alt="Happy pet"
               className="w-full h-full object-cover p-2 rounded-[18px]"
             />
@@ -157,7 +157,7 @@ const Contact = () => {
             }}
           >
             <img
-              src="/images/new_image_05.jpg"
+              src="/images/new_image_04.jpg"
               alt="Elegant cat"
               className="w-full h-full object-cover p-2 rounded-[18px]"
             />

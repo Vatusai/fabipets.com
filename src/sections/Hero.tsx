@@ -159,7 +159,7 @@ const Hero = () => {
           {/* Collage Images */}
           {/* Image A - top-left */}
           <div
-            ref={(el) => { imagesRef.current[0] = el; }}
+            ref={(el) => { if (el) imagesRef.current[0] = el; }}
             className="absolute fabipets-card-sm overflow-hidden"
             style={{
               left: '5%',
@@ -177,7 +177,7 @@ const Hero = () => {
 
           {/* Image B - top-right */}
           <div
-            ref={(el) => { imagesRef.current[1] = el; }}
+            ref={(el) => { if (el) imagesRef.current[1] = el; }}
             className="absolute fabipets-card-sm overflow-hidden"
             style={{
               left: '55%',
@@ -195,7 +195,7 @@ const Hero = () => {
 
           {/* Image C - bottom-left */}
           <div
-            ref={(el) => { imagesRef.current[2] = el; }}
+            ref={(el) => { if (el) imagesRef.current[2] = el; }}
             className="absolute fabipets-card-sm overflow-hidden"
             style={{
               left: '5%',
@@ -213,7 +213,7 @@ const Hero = () => {
 
           {/* Image D - bottom-center */}
           <div
-            ref={(el) => { imagesRef.current[3] = el; }}
+            ref={(el) => { if (el) imagesRef.current[3] = el; }}
             className="absolute fabipets-card-sm overflow-hidden"
             style={{
               left: '33%',
@@ -231,7 +231,7 @@ const Hero = () => {
 
           {/* Image E - bottom-right */}
           <div
-            ref={(el) => { imagesRef.current[4] = el; }}
+            ref={(el) => { if (el) imagesRef.current[4] = el; }}
             className="absolute fabipets-card-sm overflow-hidden"
             style={{
               left: '61%',
@@ -249,7 +249,7 @@ const Hero = () => {
 
           {/* Image F - center overlay (small) */}
           <div
-            ref={(el) => { imagesRef.current[5] = el; }}
+            ref={(el) => { if (el) imagesRef.current[5] = el; }}
             className="absolute fabipets-card-sm overflow-hidden z-10"
             style={{
               left: '42%',

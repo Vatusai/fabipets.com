@@ -13,11 +13,11 @@ const Lookbook = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   const lookbookImages = [
-    { src: '/images/new_image_28.png', alt: 'Style moment 1', span: 'row-span-2' },
-    { src: '/images/new_image_22.jpg', alt: 'Style moment 2', span: '' },
-    { src: '/images/new_image_23.jpg', alt: 'Style moment 3', span: '' },
-    { src: '/images/new_image_24.jpg', alt: 'Style moment 4', span: '' },
-    { src: '/images/new_image_25.jpg', alt: 'Style moment 5', span: 'row-span-2' },
+    { src: '/images/new_image_22.jpg', alt: 'Style moment 1', span: 'row-span-2' },
+    { src: '/images/new_image_23.jpg', alt: 'Style moment 2', span: '' },
+    { src: '/images/new_image_24.jpg', alt: 'Style moment 3', span: '' },
+    { src: '/images/new_image_25.jpg', alt: 'Style moment 4', span: '' },
+    { src: '/images/new_image_20.jpg', alt: 'Style moment 5', span: 'row-span-2' },
   ];
 
   useLayoutEffect(() => {
@@ -106,7 +106,7 @@ const Lookbook = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
           {/* Left Tall Card */}
           <div
-            ref={(el) => { cardsRef.current[0] = el; }}
+            ref={(el) => { if (el) cardsRef.current[0] = el; }}
             className="row-span-2"
           >
             <div className="fabipets-card overflow-hidden hover-lift group cursor-pointer h-full">
@@ -120,7 +120,7 @@ const Lookbook = () => {
 
           {/* Center Top Wide Card */}
           <div
-            ref={(el) => { cardsRef.current[1] = el; }}
+            ref={(el) => { if (el) cardsRef.current[1] = el; }}
             className="col-span-2"
           >
             <div className="fabipets-card-sm overflow-hidden hover-lift group cursor-pointer h-full">
@@ -134,7 +134,7 @@ const Lookbook = () => {
 
           {/* Far Right Tall Card */}
           <div
-            ref={(el) => { cardsRef.current[4] = el; }}
+            ref={(el) => { if (el) cardsRef.current[4] = el; }}
             className="row-span-2"
           >
             <div className="fabipets-card overflow-hidden hover-lift group cursor-pointer h-full">
@@ -148,7 +148,7 @@ const Lookbook = () => {
 
           {/* Center Bottom Small Card */}
           <div
-            ref={(el) => { cardsRef.current[2] = el; }}
+            ref={(el) => { if (el) cardsRef.current[2] = el; }}
           >
             <div className="fabipets-card-sm overflow-hidden hover-lift group cursor-pointer h-full">
               <img
@@ -161,7 +161,7 @@ const Lookbook = () => {
 
           {/* Right Tall Card */}
           <div
-            ref={(el) => { cardsRef.current[3] = el; }}
+            ref={(el) => { if (el) cardsRef.current[3] = el; }}
           >
             <div className="fabipets-card-sm overflow-hidden hover-lift group cursor-pointer h-full">
               <img

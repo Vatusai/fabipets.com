@@ -101,6 +101,10 @@
       "returns": {
         "title": "Returns",
         "description": "Easy returns if the size is not right"
+      },
+      "shipping": {
+        "title": "Shipping",
+        "description": "Nationwide and international shipping"
       }
     }
   },
