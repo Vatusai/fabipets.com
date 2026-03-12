@@ -49,9 +49,13 @@ const Navigation = () => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="font-display font-bold text-xl md:text-2xl text-black tracking-tight"
+            className="flex items-center"
           >
-            Fabipets<span className="text-camel">.</span>
+            <img
+              src="/logo-horizontal.png"
+              alt="FabiPets"
+              className="h-10 md:h-14 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Navigation */}
