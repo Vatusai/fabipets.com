@@ -114,7 +114,7 @@ const SizeGuide = () => {
   return (
     <section
       ref={sectionRef}
-      className="section-flowing bg-blush z-50"
+      className="section-flowing z-50"
     >
       <div className="px-6 md:px-[7vw] py-16 md:py-24">
         {/* Heading */}

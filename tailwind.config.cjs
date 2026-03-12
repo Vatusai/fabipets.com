@@ -11,9 +11,9 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         pink: {
-          DEFAULT: "#ff73c3",
-          dark: "#e055a8",
-          light: "#ff9dd4",
+          DEFAULT: "#D1699B",
+          dark: "#A8547D",
+          light: "#E88FB0",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -57,8 +57,8 @@ module.exports = {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-        pink: "0 0 40px rgba(255, 115, 195, 0.4)",
-        "pink-lg": "0 0 60px rgba(255, 115, 195, 0.6)",
+        pink: "0 0 40px rgba(209, 105, 155, 0.4)",
+        "pink-lg": "0 0 60px rgba(209, 105, 155, 0.6)",
       },
       keyframes: {
         "accordion-down": {

@@ -106,7 +106,7 @@ const CustomDesign = () => {
     <section
       ref={sectionRef}
       id="custom"
-      className="relative w-full min-h-screen bg-blush flex items-center justify-center z-40 py-16 md:py-24"
+      className="relative w-full min-h-screen flex items-center justify-center z-40 py-16 md:py-24"
     >
       <div className="relative w-full px-6 md:px-[6vw]">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-start">

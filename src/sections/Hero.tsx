@@ -142,7 +142,7 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen bg-blush flex items-center justify-center z-10 overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center z-10 overflow-hidden"
     >
       <div className="relative w-full h-full flex items-center justify-center py-24 md:py-32">
         {/* Collage Frame */}

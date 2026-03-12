@@ -78,7 +78,7 @@ const Lookbook = () => {
     <section
       ref={sectionRef}
       id="lookbook"
-      className="section-flowing bg-blush z-[70]"
+      className="section-flowing z-[70]"
     >
       <div className="px-6 md:px-[7vw] py-16 md:py-24">
         {/* Heading */}

@@ -13,13 +13,13 @@
     --card-foreground: 0 0% 7%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 7%;
-    --primary: 30 40% 65%; /* #D4A574 warm camel/tan */
+    --primary: 330 55% 62%; /* #D1699B pink accent */
     --primary-foreground: 0 0% 100%;
     --secondary: 350 40% 88%;
     --secondary-foreground: 0 0% 7%;
     --muted: 0 0% 44%; /* #6F6F6F */
     --muted-foreground: 0 0% 44%;
-    --accent: 30 40% 65%; /* #D4A574 */
+    --accent: 330 55% 62%; /* #D1699B */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -29,10 +29,10 @@
     --radius: 1.75rem;
     
     /* Custom Fabipets Colors */
-    --blush: #F6B7C1;
-    --blush-light: #FAD4DA;
-    --camel: #D4A574;
-    --camel-dark: #B88B5A;
+    --blush: transparent;
+    --blush-light: transparent;
+    --camel: #D1699B;
+    --camel-dark: #A8547D;
     --black: #111111;
     --white: #ffffff;
     --gray: #6F6F6F;
@@ -53,8 +53,8 @@
     @apply antialiased;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
-    background-color: #9C7EE0;
-    background-image: linear-gradient(to top, #5B4D8F, #9C7EE0);
+    background-color: #684796;
+    background-image: linear-gradient(to top, #684796, #8FD2EF);
     color: var(--black);
     min-height: 100vh;
   }
@@ -82,7 +82,7 @@
   }
   
   .bg-blush {
-    background-color: var(--blush);
+    background-color: transparent;
   }
   
   .bg-dark {
@@ -161,7 +161,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #9C7EE0;
+  background: #684796;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -292,7 +292,7 @@ input, textarea, select {
 
 input:focus, textarea:focus, select:focus {
   @apply border-camel;
-  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.2);
+  box-shadow: 0 0 0 3px rgba(209, 105, 155, 0.2);
 }
 
 /* Button Styles */

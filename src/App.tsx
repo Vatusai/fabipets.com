@@ -31,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-blush">
+    <div className="relative min-h-screen overflow-x-hidden">
       {/* Grain overlay */}
       <div className="grain-overlay" />
       

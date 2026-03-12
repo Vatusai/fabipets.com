@@ -135,7 +135,7 @@ const CollectionGrid = () => {
     <section
       ref={sectionRef}
       id="collection"
-      className="section-flowing bg-blush z-30"
+      className="section-flowing z-30"
     >
       <div className="px-6 md:px-[7vw] py-16 md:py-24">
         {/* Heading */}
