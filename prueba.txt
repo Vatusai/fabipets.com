@@ -1,0 +1,40 @@
+Quiero que diseñes una pequeña aplicación de escritorio para Windows que sirva como lanzador de conexión para un cliente V2Ray/Xray YA INSTALADO en el sistema.
+
+Objetivo:
+- La app NO debe incrustar credenciales sensibles dentro del ejecutable.
+- La app debe leer la configuración desde un archivo externo `config.json` ubicado junto al ejecutable, o desde variables de entorno.
+- La app debe permitir:
+  1. Ver estado: conectado / desconectado
+  2. Botón “Conectar”
+  3. Botón “Desconectar”
+  4. Botón “Abrir carpeta de configuración”
+  5. Botón “Ver logs”
+- La app debe ser simple, robusta y fácil de compilar en Windows.
+
+Requisitos técnicos:
+- Lenguaje: Python
+- GUI: Tkinter o CustomTkinter
+- La app debe invocar un cliente existente de Xray/V2Ray mediante línea de comandos, usando un archivo de configuración externo.
+- Debe verificar si el proceso ya está corriendo antes de iniciar otro.
+- Debe poder cerrar el proceso limpiamente.
+- Debe registrar errores en un archivo `launcher.log`.
+
+Requisitos de seguridad:
+- No guardar secretos dentro del código fuente.
+- No hardcodear UUID, dominio, puertos, ni links VLESS reales.
+- Usar placeholders en el ejemplo:
+  - UUID_PLACEHOLDER
+  - DOMAIN_PLACEHOLDER
+  - PORT_PLACEHOLDER
+- Si se muestra un ejemplo de `config.json`, que use placeholders y comentarios explicando dónde reemplazar cada valor.
+- La app debe estar pensada solo para uso legítimo del propietario de la conexión.
+
+Entregables:
+1. Estructura completa del proyecto
+2. Código fuente del launcher
+3. Ejemplo de `config.template.json` con placeholders
+4. Instrucciones para compilar a `.exe` con PyInstaller
+5. Buen manejo de errores y mensajes visuales en la GUI
+6. Instrucciones para que el usuario copie su configuración real manualmente sin exponerla
+
+Hazlo limpio, profesional y fácil de mantener.

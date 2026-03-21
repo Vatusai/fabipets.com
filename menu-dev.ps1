@@ -2,7 +2,7 @@
 # Menú de Desarrollo - fabipets.com
 # ============================================
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"
 
 # Colores
 $Green = "Green"
@@ -28,7 +28,9 @@ function Show-Menu {
 function Start-DevServer {
     Write-Host "`n🚀 Iniciando servidor..." -ForegroundColor $Cyan
     Write-Host "🔗 http://localhost:5173`n" -ForegroundColor $Yellow
-    npm run dev
+    Start-Sleep -Seconds 2
+    Start-Process "http://localhost:5173"
+    try { npm run dev } catch { }
 }
 
 function Install-Dependencies {
@@ -48,7 +50,9 @@ function Build-Production {
 function Preview-Production {
     Write-Host "`n👁️  Previsualizando build de producción..." -ForegroundColor $Cyan
     Write-Host "🔗 http://localhost:4173`n" -ForegroundColor $Yellow
-    npm run preview
+    Start-Sleep -Seconds 2
+    Start-Process "http://localhost:4173"
+    try { npm run preview } catch { }
 }
 
 function Push-Changes {

@@ -18,12 +18,12 @@ const CollectionGrid = () => {
   const collections = [
     {
       name: t('collection.categories.dresses.name'),
-      image: '/images/new_image_10.png',
+      image: '/images/new_image_10.jpg',
       description: t('collection.categories.dresses.description'),
     },
     {
       name: t('collection.categories.shirts.name'),
-      image: '/images/new_image_11.png',
+      image: '/images/new_image_11.jpg',
       description: t('collection.categories.shirts.description'),
     },
     {

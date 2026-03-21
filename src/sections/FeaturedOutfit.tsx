@@ -103,11 +103,14 @@ const FeaturedOutfit = () => {
             className="md:col-span-6 fabipets-card overflow-hidden"
           >
             <div className="aspect-[4/5] p-2">
-              <img
-                src="/images/new_image_07.png"
-                alt="Statement Suit"
-                className="w-full h-full object-cover rounded-[20px]"
-              />
+              <picture>
+                <source srcSet="/images/new_image_07.webp" type="image/webp" />
+                <img
+                  src="/images/new_image_07.jpg"
+                  alt="Statement Suit"
+                  className="w-full h-full object-cover rounded-[20px]"
+                />
+              </picture>
             </div>
           </div>
 
@@ -119,11 +122,14 @@ const FeaturedOutfit = () => {
               className="fabipets-card-sm overflow-hidden"
             >
               <div className="aspect-square p-2">
-                <img
-                  src="/images/new_image_08.jpg"
-                  alt="Suit detail"
-                  className="w-full h-full object-cover rounded-[14px]"
-                />
+                <picture>
+                  <source srcSet="/images/new_image_08.webp" type="image/webp" />
+                  <img
+                    src="/images/new_image_08.jpg"
+                    alt="Suit detail"
+                    className="w-full h-full object-cover rounded-[14px]"
+                  />
+                </picture>
               </div>
             </div>
 
@@ -133,11 +139,14 @@ const FeaturedOutfit = () => {
               className="fabipets-card-sm overflow-hidden"
             >
               <div className="aspect-[4/5] p-2">
-                <img
-                  src="/images/new_image_09.jpg"
-                  alt="Accessories"
-                  className="w-full h-full object-cover rounded-[14px]"
-                />
+                <picture>
+                  <source srcSet="/images/new_image_09.webp" type="image/webp" />
+                  <img
+                    src="/images/new_image_09.jpg"
+                    alt="Accessories"
+                    className="w-full h-full object-cover rounded-[14px]"
+                  />
+                </picture>
               </div>
             </div>
           </div>

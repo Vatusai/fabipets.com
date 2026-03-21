@@ -102,11 +102,14 @@ const Testimonials = () => {
             className="md:col-span-6 fabipets-card overflow-hidden"
           >
             <div className="aspect-[4/5] p-2">
-              <img
-                src="/images/new_image_18.jpg"
-                alt="Happy customer"
-                className="w-full h-full object-cover rounded-[20px]"
-              />
+              <picture>
+                <source srcSet="/images/new_image_18.webp" type="image/webp" />
+                <img
+                  src="/images/new_image_18.jpg"
+                  alt="Happy customer"
+                  className="w-full h-full object-cover rounded-[20px]"
+                />
+              </picture>
             </div>
           </div>
 
@@ -118,11 +121,14 @@ const Testimonials = () => {
               className="fabipets-card-sm overflow-hidden"
             >
               <div className="aspect-square p-2">
-                <img
-                  src="/images/new_image_19.jpg"
-                  alt="Another happy pet"
-                  className="w-full h-full object-cover rounded-[14px]"
-                />
+                <picture>
+                  <source srcSet="/images/new_image_19.webp" type="image/webp" />
+                  <img
+                    src="/images/new_image_19.jpg"
+                    alt="Another happy pet"
+                    className="w-full h-full object-cover rounded-[14px]"
+                  />
+                </picture>
               </div>
             </div>
 
@@ -132,11 +138,14 @@ const Testimonials = () => {
               className="fabipets-card-sm overflow-hidden"
             >
               <div className="aspect-[4/5] p-2">
-                <img
-                  src="/images/new_image_20.jpg"
-                  alt="Pet in outfit"
-                  className="w-full h-full object-cover rounded-[14px]"
-                />
+                <picture>
+                  <source srcSet="/images/new_image_20.webp" type="image/webp" />
+                  <img
+                    src="/images/new_image_20.jpg"
+                    alt="Pet in outfit"
+                    className="w-full h-full object-cover rounded-[14px]"
+                  />
+                </picture>
               </div>
             </div>
           </div>

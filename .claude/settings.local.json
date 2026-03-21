@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(netstat -ano)",
+      "Bash(tasklist:*)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(curl -sv http://localhost:5173/)",
+      "Bash(curl -sv http://[::1]:5173/)",
+      "Bash(node -e \"const v = require\\(''./node_modules/vite/package.json''\\); console.log\\(v.version\\)\")",
+      "Bash(taskkill:*)",
+      "Bash(powershell -Command \"Stop-Process -Name node -Force -ErrorAction SilentlyContinue; Write-Host 'Done'\")"
+    ]
+  }
+}

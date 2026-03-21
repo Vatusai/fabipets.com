@@ -116,11 +116,14 @@ const CustomDesign = () => {
             className="md:col-span-6 fabipets-card overflow-hidden"
           >
             <div className="aspect-[4/5] p-2">
-              <img
-                src="/images/new_image_14.png"
-                alt="Custom fit design"
-                className="w-full h-full object-cover rounded-[20px]"
-              />
+              <picture>
+                <source srcSet="/images/new_image_14.webp" type="image/webp" />
+                <img
+                  src="/images/new_image_14.jpg"
+                  alt="Custom fit design"
+                  className="w-full h-full object-cover rounded-[20px]"
+                />
+              </picture>
             </div>
           </div>
 
@@ -132,11 +135,14 @@ const CustomDesign = () => {
               className="fabipets-card-sm overflow-hidden"
             >
               <div className="aspect-square p-2">
-                <img
-                  src="/images/new_image_15.jpg"
-                  alt="Custom fit detail"
-                  className="w-full h-full object-cover rounded-[14px]"
-                />
+                <picture>
+                  <source srcSet="/images/new_image_15.webp" type="image/webp" />
+                  <img
+                    src="/images/new_image_15.jpg"
+                    alt="Custom fit detail"
+                    className="w-full h-full object-cover rounded-[14px]"
+                  />
+                </picture>
               </div>
             </div>
 
@@ -146,11 +152,14 @@ const CustomDesign = () => {
               className="fabipets-card-sm overflow-hidden"
             >
               <div className="aspect-[4/5] p-2">
-                <img
-                  src="/images/new_image_16.jpg"
-                  alt="Size guide"
-                  className="w-full h-full object-cover rounded-[14px]"
-                />
+                <picture>
+                  <source srcSet="/images/new_image_16.webp" type="image/webp" />
+                  <img
+                    src="/images/new_image_16.jpg"
+                    alt="Size guide"
+                    className="w-full h-full object-cover rounded-[14px]"
+                  />
+                </picture>
               </div>
             </div>
           </div>

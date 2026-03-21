@@ -120,11 +120,14 @@ const CraftCare = () => {
             className="md:col-span-6 fabipets-card overflow-hidden"
           >
             <div className="aspect-[4/5] p-2">
-              <img
-                src="/images/new_image_22.jpg"
-                alt="Craft and care"
-                className="w-full h-full object-cover rounded-[20px]"
-              />
+              <picture>
+                <source srcSet="/images/new_image_22.webp" type="image/webp" />
+                <img
+                  src="/images/new_image_22.jpg"
+                  alt="Craft and care"
+                  className="w-full h-full object-cover rounded-[20px]"
+                />
+              </picture>
             </div>
           </div>
 
@@ -136,11 +139,14 @@ const CraftCare = () => {
               className="fabipets-card-sm overflow-hidden"
             >
               <div className="aspect-square p-2">
-                <img
-                  src="/images/new_image_28.png"
-                  alt="Craft detail"
-                  className="w-full h-full object-cover rounded-[14px]"
-                />
+                <picture>
+                  <source srcSet="/images/new_image_28.webp" type="image/webp" />
+                  <img
+                    src="/images/new_image_28.jpg"
+                    alt="Craft detail"
+                    className="w-full h-full object-cover rounded-[14px]"
+                  />
+                </picture>
               </div>
             </div>
 
@@ -150,11 +156,14 @@ const CraftCare = () => {
               className="fabipets-card-sm overflow-hidden"
             >
               <div className="aspect-[4/5] p-2">
-                <img
-                  src="/images/new_image_01.png"
-                  alt="Pet in outfit"
-                  className="w-full h-full object-cover rounded-[14px]"
-                />
+                <picture>
+                  <source srcSet="/images/new_image_01.webp" type="image/webp" />
+                  <img
+                    src="/images/new_image_01.jpg"
+                    alt="Pet in outfit"
+                    className="w-full h-full object-cover rounded-[14px]"
+                  />
+                </picture>
               </div>
             </div>
           </div>

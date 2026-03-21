@@ -168,11 +168,14 @@ const Hero = () => {
               height: '40%',
             }}
           >
-            <img
-              src="/images/new_image_01.png"
-              alt="Dog with flower crown"
-              className="w-full h-full object-cover"
-            />
+            <picture>
+              <source srcSet="/images/new_image_01.webp" type="image/webp" />
+              <img
+                src="/images/new_image_01.jpg"
+                alt="Dog with flower crown"
+                className="w-full h-full object-cover"
+              />
+            </picture>
           </div>
 
           {/* Image B - top-right */}
@@ -186,11 +189,14 @@ const Hero = () => {
               height: '40%',
             }}
           >
-            <img
-              src="/images/new_image_02.png"
-              alt="Elegant cat"
-              className="w-full h-full object-cover"
-            />
+            <picture>
+              <source srcSet="/images/new_image_02.webp" type="image/webp" />
+              <img
+                src="/images/new_image_02.jpg"
+                alt="Elegant cat"
+                className="w-full h-full object-cover"
+              />
+            </picture>
           </div>
 
           {/* Image C - bottom-left */}
@@ -204,11 +210,14 @@ const Hero = () => {
               height: '36%',
             }}
           >
-            <img
-              src="/images/new_image_03.jpg"
-              alt="Dog in costume"
-              className="w-full h-full object-cover"
-            />
+            <picture>
+              <source srcSet="/images/new_image_03.webp" type="image/webp" />
+              <img
+                src="/images/new_image_03.jpg"
+                alt="Dog in costume"
+                className="w-full h-full object-cover"
+              />
+            </picture>
           </div>
 
           {/* Image D - bottom-center */}
@@ -222,11 +231,14 @@ const Hero = () => {
               height: '36%',
             }}
           >
-            <img
-              src="/images/new_image_04.jpg"
-              alt="Dog with bow tie"
-              className="w-full h-full object-cover"
-            />
+            <picture>
+              <source srcSet="/images/new_image_04.webp" type="image/webp" />
+              <img
+                src="/images/new_image_04.jpg"
+                alt="Dog with bow tie"
+                className="w-full h-full object-cover"
+              />
+            </picture>
           </div>
 
           {/* Image E - bottom-right */}
@@ -240,11 +252,14 @@ const Hero = () => {
               height: '36%',
             }}
           >
-            <img
-              src="/images/new_image_05.jpg"
-              alt="Dog with sunglasses"
-              className="w-full h-full object-cover"
-            />
+            <picture>
+              <source srcSet="/images/new_image_05.webp" type="image/webp" />
+              <img
+                src="/images/new_image_05.jpg"
+                alt="Dog with sunglasses"
+                className="w-full h-full object-cover"
+              />
+            </picture>
           </div>
 
           {/* Image F - center overlay (small) */}
@@ -258,11 +273,14 @@ const Hero = () => {
               height: '24%',
             }}
           >
-            <img
-              src="/images/new_image_06.jpg"
-              alt="Pet paws closeup"
-              className="w-full h-full object-cover"
-            />
+            <picture>
+              <source srcSet="/images/new_image_06.webp" type="image/webp" />
+              <img
+                src="/images/new_image_06.jpg"
+                alt="Pet paws closeup"
+                className="w-full h-full object-cover"
+              />
+            </picture>
           </div>
         </div>
 

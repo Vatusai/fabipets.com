@@ -120,11 +120,14 @@ const Contact = () => {
               height: '72vh',
             }}
           >
-            <img
-              src="/images/new_image_02.png"
-              alt="Contact us"
-              className="w-full h-full object-cover p-2.5 rounded-[28px]"
-            />
+            <picture>
+              <source srcSet="/images/new_image_02.webp" type="image/webp" />
+              <img
+                src="/images/new_image_02.jpg"
+                alt="Contact us"
+                className="w-full h-full object-cover p-2.5 rounded-[28px]"
+              />
+            </picture>
           </div>
 
           {/* Right Top Photo Card (small) */}
@@ -138,11 +141,14 @@ const Contact = () => {
               height: '22vh',
             }}
           >
-            <img
-              src="/images/new_image_03.jpg"
-              alt="Happy pet"
-              className="w-full h-full object-cover p-2 rounded-[18px]"
-            />
+            <picture>
+              <source srcSet="/images/new_image_03.webp" type="image/webp" />
+              <img
+                src="/images/new_image_03.jpg"
+                alt="Happy pet"
+                className="w-full h-full object-cover p-2 rounded-[18px]"
+              />
+            </picture>
           </div>
 
           {/* Right Bottom Photo Card (medium) */}
@@ -156,11 +162,14 @@ const Contact = () => {
               height: '44vh',
             }}
           >
-            <img
-              src="/images/new_image_04.jpg"
-              alt="Elegant cat"
-              className="w-full h-full object-cover p-2 rounded-[18px]"
-            />
+            <picture>
+              <source srcSet="/images/new_image_04.webp" type="image/webp" />
+              <img
+                src="/images/new_image_04.jpg"
+                alt="Elegant cat"
+                className="w-full h-full object-cover p-2 rounded-[18px]"
+              />
+            </picture>
           </div>
 
           {/* Contact Panel (right, large) */}

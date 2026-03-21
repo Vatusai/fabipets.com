@@ -1,7 +1,7 @@
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Ruler, Check, RefreshCw, Truck } from 'lucide-react';
+import { Clock, Check, RefreshCw, Truck } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,7 +16,7 @@ const SizeGuide = () => {
 
   const sizeSteps = [
     {
-      icon: Ruler,
+      icon: Clock,
       title: t('sizeGuide.steps.measure.title'),
       description: t('sizeGuide.steps.measure.description'),
     },
@@ -134,71 +134,53 @@ const SizeGuide = () => {
             ref={leftCardRef}
             className="md:col-span-6"
           >
-            <div className="fabipets-card p-6 md:p-8 h-full">
+            <div className="fabipets-card p-6 md:p-8">
               <h3 className="font-display font-bold text-black text-xl mb-6">
                 {t('sizeGuide.howToMeasure')}
               </h3>
               
-              {/* Size Chart */}
-              <div className="space-y-4">
-                <div className="flex items-center justify-between py-3 border-b border-black/10">
-                  <span className="font-body text-black/70">{t('sizeGuide.measurements.neck.label')}</span>
-                  <span className="font-mono text-black">{t('sizeGuide.measurements.neck.value')}</span>
+              {/* Size Guide Images - Orden numérico */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="overflow-hidden rounded-[18px] border border-black/10">
+                  <picture>
+                    <source srcSet="/images/size_guide_1.webp" type="image/webp" />
+                    <img
+                      src="/images/size_guide_1.jpg"
+                      alt="Tabla de medidas para gatos - Cuerpo"
+                      className="w-full h-auto object-cover"
+                    />
+                  </picture>
                 </div>
-                <div className="flex items-center justify-between py-3 border-b border-black/10">
-                  <span className="font-body text-black/70">{t('sizeGuide.measurements.chest.label')}</span>
-                  <span className="font-mono text-black">{t('sizeGuide.measurements.chest.value')}</span>
+                <div className="overflow-hidden rounded-[18px] border border-black/10">
+                  <picture>
+                    <source srcSet="/images/size_guide_2.webp" type="image/webp" />
+                    <img
+                      src="/images/size_guide_2.jpg"
+                      alt="Tabla de medidas para gatos - Cabeza"
+                      className="w-full h-auto object-cover"
+                    />
+                  </picture>
                 </div>
-                <div className="flex items-center justify-between py-3 border-b border-black/10">
-                  <span className="font-body text-black/70">{t('sizeGuide.measurements.length.label')}</span>
-                  <span className="font-mono text-black">{t('sizeGuide.measurements.length.value')}</span>
+                <div className="overflow-hidden rounded-[18px] border border-black/10">
+                  <picture>
+                    <source srcSet="/images/size_guide_3.webp" type="image/webp" />
+                    <img
+                      src="/images/size_guide_3.jpg"
+                      alt="Tabla de medidas para perros - Cuerpo"
+                      className="w-full h-auto object-cover"
+                    />
+                  </picture>
                 </div>
-              </div>
-
-              {/* Size Table */}
-              <div className="mt-8 overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b-2 border-black">
-                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.size')}</th>
-                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.neck')}</th>
-                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.chest')}</th>
-                      <th className="text-left py-2 font-display font-bold">{t('sizeGuide.table.length')}</th>
-                    </tr>
-                  </thead>
-                  <tbody className="font-body">
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">XS</td>
-                      <td className="py-2">20-25cm</td>
-                      <td className="py-2">30-35cm</td>
-                      <td className="py-2">20-25cm</td>
-                    </tr>
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">S</td>
-                      <td className="py-2">25-30cm</td>
-                      <td className="py-2">35-45cm</td>
-                      <td className="py-2">25-30cm</td>
-                    </tr>
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">M</td>
-                      <td className="py-2">30-35cm</td>
-                      <td className="py-2">45-55cm</td>
-                      <td className="py-2">30-35cm</td>
-                    </tr>
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">L</td>
-                      <td className="py-2">35-45cm</td>
-                      <td className="py-2">55-70cm</td>
-                      <td className="py-2">35-45cm</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2">XL</td>
-                      <td className="py-2">45-55cm</td>
-                      <td className="py-2">70-85cm</td>
-                      <td className="py-2">45-55cm</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="overflow-hidden rounded-[18px] border border-black/10">
+                  <picture>
+                    <source srcSet="/images/size_guide_4.webp" type="image/webp" />
+                    <img
+                      src="/images/size_guide_4.jpg"
+                      alt="Tabla de medidas para perros - Cabeza"
+                      className="w-full h-auto object-cover"
+                    />
+                  </picture>
+                </div>
               </div>
             </div>
           </div>
@@ -210,11 +192,14 @@ const SizeGuide = () => {
               ref={rightTopRef}
               className="fabipets-card-sm overflow-hidden"
             >
-              <img
-                src="/images/new_image_17.jpg"
-                alt="Size guide demonstration"
-                className="w-full h-48 md:h-56 object-cover p-2 rounded-[18px]"
-              />
+              <picture>
+                <source srcSet="/images/new_image_17.webp" type="image/webp" />
+                <img
+                  src="/images/new_image_17.jpg"
+                  alt="Size guide demonstration"
+                  className="w-full h-48 md:h-56 object-cover p-2 rounded-[18px]"
+                />
+              </picture>
             </div>
 
             {/* Right Bottom - Info Cards */}
