@@ -65,6 +65,18 @@ const Navigation = () => {
             >
               About Us
             </a>
+            <a
+              href="/tienda.html"
+              className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
+            >
+              Tienda
+            </a>
+            <a
+              href="/shop.html"
+              className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
+            >
+              Shop
+            </a>
             <button
               onClick={() => scrollToSection('#custom')}
               className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
@@ -123,6 +135,20 @@ const Navigation = () => {
             className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
           >
             About Us
+          </a>
+          <a
+            href="/tienda.html"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
+          >
+            Tienda
+          </a>
+          <a
+            href="/shop.html"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
+          >
+            Shop
           </a>
           <button
             onClick={() => { scrollToSection('#custom'); setIsMobileMenuOpen(false); }}

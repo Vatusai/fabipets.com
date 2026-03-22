@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | FabiPets</title>
+  <meta name="description" content="Explore our collection of pet outfits at FabiPets. Dresses, shirts, costumes and accessories for your furry friends.">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  
+  <link rel="stylesheet" href="/assets/about-styles.css">
+  
+  <style>
+    body { margin: 0; }
+    .category-section { scroll-margin-top: 100px; }
+  </style>
+</head>
+<body class="bg-[#f4f4f2] text-[#1a1a1a] font-body overflow-x-hidden">
+  
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent py-6" id="navbar">
+    <div class="w-full px-6 md:px-12 flex items-center justify-between">
+      <a href="/" class="flex items-center">
+        <img src="/logo-horizontal.png" alt="FabiPets" class="h-10 md:h-14 w-auto object-contain">
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/#collection" class="font-body text-sm text-black/70 hover:text-black transition-colors duration-300">Collection</a>
+        <a href="/about-us.html" class="font-body text-sm text-black/70 hover:text-black transition-colors duration-300">About Us</a>
+        <a href="/tienda.html" class="font-body text-sm text-black/70 hover:text-black transition-colors duration-300">Tienda</a>
+        <a href="/shop.html" class="font-body text-sm text-camel transition-colors duration-300">Shop</a>
+        <a href="/#custom" class="font-body text-sm text-black/70 hover:text-black transition-colors duration-300">Custom</a>
+        <a href="/#lookbook" class="font-body text-sm text-black/70 hover:text-black transition-colors duration-300">Lookbook</a>
+        <a href="/#contact" class="font-body text-sm text-black/70 hover:text-black transition-colors duration-300">Contact</a>
+        <a href="https://api.whatsapp.com/send/?phone=584142490629" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm">Order on WhatsApp</a>
+      </div>
+      
+      <button class="md:hidden p-2 text-black" onclick="toggleMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500 md:hidden">
+    <button class="absolute top-6 right-6 p-2 text-black" onclick="toggleMenu()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <a href="/" class="font-display text-2xl text-black hover:text-camel transition-colors">Home</a>
+    <a href="/#collection" class="font-display text-2xl text-black hover:text-camel transition-colors">Collection</a>
+    <a href="/about-us.html" class="font-display text-2xl text-black hover:text-camel transition-colors">About Us</a>
+    <a href="/tienda.html" class="font-display text-2xl text-black hover:text-camel transition-colors">Tienda</a>
+    <a href="/shop.html" class="font-display text-2xl text-camel transition-colors">Shop</a>
+    <a href="/#custom" class="font-display text-2xl text-black hover:text-camel transition-colors">Custom</a>
+    <a href="/#lookbook" class="font-display text-2xl text-black hover:text-camel transition-colors">Lookbook</a>
+    <a href="/#contact" class="font-display text-2xl text-black hover:text-camel transition-colors">Contact</a>
+    <a href="https://api.whatsapp.com/send/?phone=584142490629" target="_blank" class="btn-primary mt-4">Order on WhatsApp</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="pt-24 md:pt-32">
+    
+    <!-- Header Section -->
+    <section class="section-flowing z-40 bg-[#f4f4f2]">
+      <div class="px-6 md:px-[7vw] pt-16 md:pt-24 pb-8">
+        <h1 class="font-display font-black text-black text-4xl md:text-6xl uppercase leading-none mb-2">Shop</h1>
+        <p class="font-display font-bold text-camel text-xl md:text-2xl uppercase mb-6">Our Products</p>
+        <p class="font-body text-black/70 text-lg max-w-2xl">Explore our categories and find the perfect outfit for your pet. All products are handmade with love.</p>
+        
+        <!-- Category Quick Links -->
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a href="#dresses" class="px-4 py-2 bg-camel/20 text-camel rounded-full font-body text-sm hover:bg-camel hover:text-white transition-colors">Dresses</a>
+          <a href="#shirts" class="px-4 py-2 bg-camel/20 text-camel rounded-full font-body text-sm hover:bg-camel hover:text-white transition-colors">Shirts</a>
+          <a href="#costumes" class="px-4 py-2 bg-camel/20 text-camel rounded-full font-body text-sm hover:bg-camel hover:text-white transition-colors">Costumes</a>
+          <a href="#accessories" class="px-4 py-2 bg-camel/20 text-camel rounded-full font-body text-sm hover:bg-camel hover:text-white transition-colors">Accessories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: DRESSES (6 products) -->
+    <section id="dresses" class="category-section section-flowing z-40 bg-[#f4f4f2]">
+      <div class="px-6 md:px-[7vw] py-12 md:py-16">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-camel/20 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-camel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-5-6.5 5 2-7L2 9h7z"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="font-display font-bold text-black text-2xl md:text-3xl">Dresses</h2>
+            <p class="font-body text-black/60 text-sm">Elegance for your little princess</p>
+          </div>
+        </div>
+        
+        <!-- Grid 3 columns desktop, 2 mobile -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <!-- Product 1 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_10.webp" type="image/webp">
+                <img src="/images/new_image_10.jpg" alt="Floral Dress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Floral Dress</h3>
+              <p class="font-body text-camel font-semibold mt-1">$18</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Floral%20Dress" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 2 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_14.webp" type="image/webp">
+                <img src="/images/new_image_14.jpg" alt="Pink Dress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Pink Dress</h3>
+              <p class="font-body text-camel font-semibold mt-1">$20</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Pink%20Dress" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 3 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_15.webp" type="image/webp">
+                <img src="/images/new_image_15.jpg" alt="Elegant Dress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Elegant Dress</h3>
+              <p class="font-body text-camel font-semibold mt-1">$22</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Elegant%20Dress" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 4 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_06.webp" type="image/webp">
+                <img src="/images/new_image_06.jpg" alt="Party Dress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Party Dress</h3>
+              <p class="font-body text-camel font-semibold mt-1">$25</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Party%20Dress" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 5 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_18.webp" type="image/webp">
+                <img src="/images/new_image_18.jpg" alt="Spring Dress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Spring Dress</h3>
+              <p class="font-body text-camel font-semibold mt-1">$19</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Spring%20Dress" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 6 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_19.webp" type="image/webp">
+                <img src="/images/new_image_19.jpg" alt="Lace Dress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Lace Dress</h3>
+              <p class="font-body text-camel font-semibold mt-1">$24</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Lace%20Dress" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: SHIRTS (6 products) -->
+    <section id="shirts" class="category-section section-flowing z-40 bg-[#f4f4f2]">
+      <div class="px-6 md:px-[7vw] py-12 md:py-16">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-camel/20 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-camel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="font-display font-bold text-black text-2xl md:text-3xl">Shirts</h2>
+            <p class="font-body text-black/60 text-sm">Casual style for everyday wear</p>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <!-- Product 1 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_11.webp" type="image/webp">
+                <img src="/images/new_image_11.jpg" alt="Classic Shirt" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Classic Shirt</h3>
+              <p class="font-body text-camel font-semibold mt-1">$15</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Classic%20Shirt" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 2 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_01.webp" type="image/webp">
+                <img src="/images/new_image_01.jpg" alt="Sport Shirt" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Sport Shirt</h3>
+              <p class="font-body text-camel font-semibold mt-1">$16</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Sport%20Shirt" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 3 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_02.webp" type="image/webp">
+                <img src="/images/new_image_02.jpg" alt="Summer Shirt" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Summer Shirt</h3>
+              <p class="font-body text-camel font-semibold mt-1">$14</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Summer%20Shirt" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 4 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_07.webp" type="image/webp">
+                <img src="/images/new_image_07.jpg" alt="Formal Shirt" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Formal Shirt</h3>
+              <p class="font-body text-camel font-semibold mt-1">$18</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Formal%20Shirt" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 5 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_20.webp" type="image/webp">
+                <img src="/images/new_image_20.jpg" alt="Hawaiian Shirt" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Hawaiian Shirt</h3>
+              <p class="font-body text-camel font-semibold mt-1">$17</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Hawaiian%20Shirt" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 6 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_17.webp" type="image/webp">
+                <img src="/images/new_image_17.jpg" alt="Plaid Shirt" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Plaid Shirt</h3>
+              <p class="font-body text-camel font-semibold mt-1">$16</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Plaid%20Shirt" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: COSTUMES (6 products) -->
+    <section id="costumes" class="category-section section-flowing z-40 bg-[#f4f4f2]">
+      <div class="px-6 md:px-[7vw] py-12 md:py-16">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-camel/20 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-camel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a10 10 0 1 0 10 10H12V2z"/>
+              <path d="M12 12L2.1 9.9"/>
+              <path d="M12 12V2"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="font-display font-bold text-black text-2xl md:text-3xl">Costumes</h2>
+            <p class="font-body text-black/60 text-sm">For special celebrations</p>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <!-- Product 1 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_12.webp" type="image/webp">
+                <img src="/images/new_image_12.jpg" alt="Halloween Costume" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Halloween Costume</h3>
+              <p class="font-body text-camel font-semibold mt-1">$22</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Halloween%20Costume" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 2 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_08.webp" type="image/webp">
+                <img src="/images/new_image_08.jpg" alt="Christmas Costume" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Christmas Costume</h3>
+              <p class="font-body text-camel font-semibold mt-1">$24</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Christmas%20Costume" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 3 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_09.webp" type="image/webp">
+                <img src="/images/new_image_09.jpg" alt="Superhero Costume" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Superhero Costume</h3>
+              <p class="font-body text-camel font-semibold mt-1">$20</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Superhero%20Costume" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 4 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_16.webp" type="image/webp">
+                <img src="/images/new_image_16.jpg" alt="Birthday Costume" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Birthday Costume</h3>
+              <p class="font-body text-camel font-semibold mt-1">$26</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Birthday%20Costume" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 5 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_21.webp" type="image/webp">
+                <img src="/images/new_image_21.jpg" alt="Pirate Costume" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Pirate Costume</h3>
+              <p class="font-body text-camel font-semibold mt-1">$23</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Pirate%20Costume" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 6 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_22.webp" type="image/webp">
+                <img src="/images/new_image_22.jpg" alt="Angel Costume" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Angel Costume</h3>
+              <p class="font-body text-camel font-semibold mt-1">$21</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Angel%20Costume" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: ACCESSORIES (6 products) -->
+    <section id="accessories" class="category-section section-flowing z-40 bg-[#f4f4f2]">
+      <div class="px-6 md:px-[7vw] py-12 md:py-16">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-camel/20 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-camel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7"/>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="font-display font-bold text-black text-2xl md:text-3xl">Accessories</h2>
+            <p class="font-body text-black/60 text-sm">Accessories to complete the look</p>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <!-- Product 1 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_13.webp" type="image/webp">
+                <img src="/images/new_image_13.jpg" alt="Elegant Collar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Elegant Collar</h3>
+              <p class="font-body text-camel font-semibold mt-1">$12</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Elegant%20Collar" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 2 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_03.webp" type="image/webp">
+                <img src="/images/new_image_03.jpg" alt="Formal Bow Tie" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Formal Bow Tie</h3>
+              <p class="font-body text-camel font-semibold mt-1">$8</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Formal%20Bow%20Tie" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 3 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_04.webp" type="image/webp">
+                <img src="/images/new_image_04.jpg" alt="Decorative Bandana" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Decorative Bandana</h3>
+              <p class="font-body text-camel font-semibold mt-1">$10</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Decorative%20Bandana" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 4 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_05.webp" type="image/webp">
+                <img src="/images/new_image_05.jpg" alt="Premium Leash" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Premium Leash</h3>
+              <p class="font-body text-camel font-semibold mt-1">$15</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Premium%20Leash" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 5 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_23.webp" type="image/webp">
+                <img src="/images/new_image_23.jpg" alt="Shiny Ribbon" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Shiny Ribbon</h3>
+              <p class="font-body text-camel font-semibold mt-1">$9</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Shiny%20Ribbon" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+          
+          <!-- Product 6 -->
+          <div class="fabipets-card overflow-hidden hover-lift group">
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <picture>
+                <source srcset="/images/new_image_24.webp" type="image/webp">
+                <img src="/images/new_image_24.jpg" alt="Festive Bandana" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="p-4">
+              <h3 class="font-display font-semibold text-black text-sm">Festive Bandana</h3>
+              <p class="font-body text-camel font-semibold mt-1">$11</p>
+              <a href="https://api.whatsapp.com/send/?phone=584142490629&text=Hello,%20I%20want%20the%20Festive%20Bandana" target="_blank" class="btn-primary text-xs w-full text-center mt-3 block py-2">Inquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Order -->
+    <section class="section-flowing z-40 bg-[#f4f4f2]">
+      <div class="px-6 md:px-[7vw] py-12 md:py-16">
+        <div class="fabipets-card p-6 md:p-8">
+          <h3 class="font-display font-bold text-black text-xl mb-6 text-center">How to Order?</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div class="w-12 h-12 bg-camel/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-camel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <h4 class="font-display font-semibold text-black mb-2">1. Choose Your Product</h4>
+              <p class="font-body text-black/60 text-sm">Explore our categories and select the perfect outfit.</p>
+            </div>
+            <div>
+              <div class="w-12 h-12 bg-camel/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-camel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <h4 class="font-display font-semibold text-black mb-2">2. Message Us</h4>
+              <p class="font-body text-black/60 text-sm">Contact us on WhatsApp to check availability.</p>
+            </div>
+            <div>
+              <div class="w-12 h-12 bg-camel/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-camel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </div>
+              <h4 class="font-display font-semibold text-black mb-2">3. Receive Your Order</h4>
+              <p class="font-body text-black/60 text-sm">Home delivery or pickup within 4 days maximum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <!-- Footer -->
+  <footer class="text-center py-8 text-black/60 text-sm border-t border-black/10">
+    <p>&copy; 2026 Fabipets. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-lg', 'py-3');
+        navbar.classList.remove('bg-transparent', 'py-6');
+      } else {
+        navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-lg', 'py-3');
+        navbar.classList.add('bg-transparent', 'py-6');
+      }
+    });
+    
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      if (menu.classList.contains('translate-x-full')) {
+        menu.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      }
+    }
+  </script>
+</body>
+</html>
