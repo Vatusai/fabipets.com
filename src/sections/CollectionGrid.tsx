@@ -161,6 +161,8 @@ const CollectionGrid = () => {
                   src={collections[0].image}
                   alt={collections[0].name}
                   className="w-full h-full object-cover image-zoom"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
@@ -190,6 +192,8 @@ const CollectionGrid = () => {
                   src={collections[1].image}
                   alt={collections[1].name}
                   className="w-full h-full object-cover image-zoom"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
@@ -215,6 +219,8 @@ const CollectionGrid = () => {
                   src={collections[2].image}
                   alt={collections[2].name}
                   className="w-full h-full object-cover image-zoom"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
@@ -240,6 +246,8 @@ const CollectionGrid = () => {
                   src={collections[3].image}
                   alt={collections[3].name}
                   className="w-full h-full object-cover image-zoom"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">

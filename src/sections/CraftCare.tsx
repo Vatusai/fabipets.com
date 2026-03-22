@@ -126,6 +126,8 @@ const CraftCare = () => {
                   src="/images/new_image_22.jpg"
                   alt="Craft and care"
                   className="w-full h-full object-cover rounded-[20px]"
+                  loading="lazy"
+                  decoding="async"
                 />
               </picture>
             </div>
@@ -145,6 +147,8 @@ const CraftCare = () => {
                     src="/images/new_image_28.jpg"
                     alt="Craft detail"
                     className="w-full h-full object-cover rounded-[14px]"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </picture>
               </div>
@@ -162,6 +166,8 @@ const CraftCare = () => {
                     src="/images/new_image_01.jpg"
                     alt="Pet in outfit"
                     className="w-full h-full object-cover rounded-[14px]"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </picture>
               </div>

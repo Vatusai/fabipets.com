@@ -148,6 +148,8 @@ const SizeGuide = () => {
                       src="/images/size_guide_1.jpg"
                       alt="Tabla de medidas para gatos - Cuerpo"
                       className="w-full h-auto object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </picture>
                 </div>
@@ -158,6 +160,8 @@ const SizeGuide = () => {
                       src="/images/size_guide_2.jpg"
                       alt="Tabla de medidas para gatos - Cabeza"
                       className="w-full h-auto object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </picture>
                 </div>
@@ -168,6 +172,8 @@ const SizeGuide = () => {
                       src="/images/size_guide_3.jpg"
                       alt="Tabla de medidas para perros - Cuerpo"
                       className="w-full h-auto object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </picture>
                 </div>
@@ -178,6 +184,8 @@ const SizeGuide = () => {
                       src="/images/size_guide_4.jpg"
                       alt="Tabla de medidas para perros - Cabeza"
                       className="w-full h-auto object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </picture>
                 </div>

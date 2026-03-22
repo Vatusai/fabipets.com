@@ -108,6 +108,8 @@ const Testimonials = () => {
                   src="/images/new_image_18.jpg"
                   alt="Happy customer"
                   className="w-full h-full object-cover rounded-[20px]"
+                  loading="lazy"
+                  decoding="async"
                 />
               </picture>
             </div>
@@ -127,6 +129,8 @@ const Testimonials = () => {
                     src="/images/new_image_19.jpg"
                     alt="Another happy pet"
                     className="w-full h-full object-cover rounded-[14px]"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </picture>
               </div>
@@ -144,6 +148,8 @@ const Testimonials = () => {
                     src="/images/new_image_20.jpg"
                     alt="Pet in outfit"
                     className="w-full h-full object-cover rounded-[14px]"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </picture>
               </div>

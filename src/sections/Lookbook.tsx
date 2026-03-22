@@ -114,6 +114,8 @@ const Lookbook = () => {
                 src={lookbookImages[0].src}
                 alt={lookbookImages[0].alt}
                 className="w-full h-full object-cover image-zoom"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -128,6 +130,8 @@ const Lookbook = () => {
                 src={lookbookImages[1].src}
                 alt={lookbookImages[1].alt}
                 className="w-full h-full object-cover image-zoom"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -142,6 +146,8 @@ const Lookbook = () => {
                 src={lookbookImages[4].src}
                 alt={lookbookImages[4].alt}
                 className="w-full h-full object-cover image-zoom"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -155,6 +161,8 @@ const Lookbook = () => {
                 src={lookbookImages[2].src}
                 alt={lookbookImages[2].alt}
                 className="w-full h-full object-cover image-zoom"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -168,6 +176,8 @@ const Lookbook = () => {
                 src={lookbookImages[3].src}
                 alt={lookbookImages[3].alt}
                 className="w-full h-full object-cover image-zoom"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

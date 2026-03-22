@@ -17,13 +17,6 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { label: t('nav.collection'), href: '#collection' },
-    { label: t('nav.custom'), href: '#custom' },
-    { label: t('nav.lookbook'), href: '#lookbook' },
-    { label: t('nav.contact'), href: '#contact' },
-  ];
-
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -60,15 +53,36 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => scrollToSection(link.href)}
-                className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
-              >
-                {link.label}
-              </button>
-            ))}
+            <button
+              onClick={() => scrollToSection('#collection')}
+              className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
+            >
+              {t('nav.collection')}
+            </button>
+            <a
+              href="/about-us.html"
+              className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
+            >
+              About Us
+            </a>
+            <button
+              onClick={() => scrollToSection('#custom')}
+              className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
+            >
+              {t('nav.custom')}
+            </button>
+            <button
+              onClick={() => scrollToSection('#lookbook')}
+              className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
+            >
+              {t('nav.lookbook')}
+            </button>
+            <button
+              onClick={() => scrollToSection('#contact')}
+              className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
+            >
+              {t('nav.contact')}
+            </button>
             <LanguageToggle />
             <a
               href="https://api.whatsapp.com/send/?phone=584142490629&text&type=phone_number&app_absent=0"
@@ -97,15 +111,37 @@ const Navigation = () => {
         }`}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => scrollToSection(link.href)}
-              className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
-            >
-              {link.label}
-            </button>
-          ))}
+          <button
+            onClick={() => { scrollToSection('#collection'); setIsMobileMenuOpen(false); }}
+            className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
+          >
+            {t('nav.collection')}
+          </button>
+          <a
+            href="/about-us.html"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
+          >
+            About Us
+          </a>
+          <button
+            onClick={() => { scrollToSection('#custom'); setIsMobileMenuOpen(false); }}
+            className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
+          >
+            {t('nav.custom')}
+          </button>
+          <button
+            onClick={() => { scrollToSection('#lookbook'); setIsMobileMenuOpen(false); }}
+            className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
+          >
+            {t('nav.lookbook')}
+          </button>
+          <button
+            onClick={() => { scrollToSection('#contact'); setIsMobileMenuOpen(false); }}
+            className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
+          >
+            {t('nav.contact')}
+          </button>
           <LanguageToggle />
           <a
             href="https://api.whatsapp.com/send/?phone=584142490629&text&type=phone_number&app_absent=0"

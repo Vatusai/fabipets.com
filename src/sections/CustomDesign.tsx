@@ -122,6 +122,8 @@ const CustomDesign = () => {
                   src="/images/new_image_14.jpg"
                   alt="Custom fit design"
                   className="w-full h-full object-cover rounded-[20px]"
+                  loading="lazy"
+                  decoding="async"
                 />
               </picture>
             </div>
@@ -141,6 +143,8 @@ const CustomDesign = () => {
                     src="/images/new_image_15.jpg"
                     alt="Custom fit detail"
                     className="w-full h-full object-cover rounded-[14px]"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </picture>
               </div>
@@ -158,6 +162,8 @@ const CustomDesign = () => {
                     src="/images/new_image_16.jpg"
                     alt="Size guide"
                     className="w-full h-full object-cover rounded-[14px]"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </picture>
               </div>

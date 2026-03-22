@@ -109,6 +109,8 @@ const FeaturedOutfit = () => {
                   src="/images/new_image_07.jpg"
                   alt="Statement Suit"
                   className="w-full h-full object-cover rounded-[20px]"
+                  loading="lazy"
+                  decoding="async"
                 />
               </picture>
             </div>
@@ -128,6 +130,8 @@ const FeaturedOutfit = () => {
                     src="/images/new_image_08.jpg"
                     alt="Suit detail"
                     className="w-full h-full object-cover rounded-[14px]"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </picture>
               </div>
@@ -145,6 +149,8 @@ const FeaturedOutfit = () => {
                     src="/images/new_image_09.jpg"
                     alt="Accessories"
                     className="w-full h-full object-cover rounded-[14px]"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </picture>
               </div>
