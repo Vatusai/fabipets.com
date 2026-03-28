@@ -88,7 +88,7 @@
       "chest": "Pecho",
       "length": "Largo"
     },
-    "ourPromise": "Nuestra Promesa",
+    "ourPromise": "Nuestra Labor",
     "steps": {
       "measure": {
         "title": "Tiempo de entrega",
@@ -140,17 +140,29 @@
     "stamp": "CUIDADO"
   },
   "contact": {
-    "label": "Ponte en Contacto",
-    "title": "HABLEMOS",
-    "description": "¿Preguntas? ¿Una idea personalizada? Envía un mensaje—respondemos rápido.",
+    "label": "¡Viste a tu mejor amigo con estilo!",
+    "title": "DISEÑOS A LA MODA",
+    "description": "¿Te gustaría conocer nuestras últimas colecciones? Envíanos un mensaje junto con una foto de tu mascota y te compartiremos toda la información.",
     "orderWhatsApp": "Pedir por WhatsApp",
     "emailUs": "Escríbenos",
     "form": {
-      "namePlaceholder": "Nombre",
+      "namePlaceholder": "Nombre del Solicitante",
       "emailPlaceholder": "Email",
+      "phonePlaceholder": "Teléfono / WhatsApp",
+      "subjectPlaceholder": "Tipo de mascota",
+      "subjectOptions": {
+        "dog": "Perro",
+        "cat": "Gato",
+        "rabbit": "Conejo",
+        "other": "Otro"
+      },
+      "petPlaceholder": "Nombre de la mascota y talla",
+      "photoPlaceholder": "Subir foto de tu mascota (opcional)",
       "messagePlaceholder": "Mensaje",
       "send": "Enviar",
-      "successMessage": "¡Gracias por tu mensaje! Te responderemos pronto."
+      "sending": "Enviando...",
+      "successMessage": "¡Gracias por tu mensaje! Te responderemos pronto.",
+      "errorMessage": "Ocurrió un error. Intenta de nuevo."
     },
     "followUs": "Síguenos",
     "footer": {

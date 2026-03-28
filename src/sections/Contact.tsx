@@ -1,10 +1,9 @@
 import { useRef, useLayoutEffect, useState } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { MessageCircle, Mail, Send, Instagram } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-
-gsap.registerPlugin(ScrollTrigger);
+import { CONTACT, WEB3FORMS } from '../config';
+import { supabase } from '../lib/supabase';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -18,13 +17,58 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
+    subject: '',
+    pet: '',
     message: '',
   });
+  const [photo, setPhoto] = useState<File | null>(null);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert(t('contact.form.successMessage'));
-    setFormData({ name: '', email: '', message: '' });
+    setStatus('loading');
+
+    try {
+      const body = new FormData();
+      body.append('access_key', WEB3FORMS.accessKey);
+      body.append('name', formData.name);
+      body.append('email', formData.email);
+      body.append('phone', formData.phone);
+      body.append('subject', formData.subject);
+      body.append('pet', formData.pet);
+      body.append('message', formData.message);
+      if (photo) body.append('attachment', photo);
+
+      const res = await fetch(WEB3FORMS.endpoint, {
+        method: 'POST',
+        body,
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        // Guardar en Supabase
+        await supabase.from('messages').insert({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || null,
+          subject: formData.subject || null,
+          pet: formData.pet || null,
+          message: formData.message || null,
+        });
+
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', subject: '', pet: '', message: '' });
+        setPhoto(null);
+        if (fileInputRef.current) fileInputRef.current.value = '';
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   useLayoutEffect(() => {
@@ -108,11 +152,13 @@ const Contact = () => {
       className="section-flowing bg-dark z-[90] relative"
     >
       <div className="px-6 md:px-[7vw] py-16 md:py-24">
-        <div className="relative min-h-[80vh]">
-          {/* Left Photo Card (large) */}
+        {/* Mobile/Tablet: Grid layout | Desktop: Absolute positioning */}
+        <div className="grid grid-cols-1 lg:block relative min-h-[auto] lg:min-h-[80vh]">
+          
+          {/* Left Photo Card (large) - Hidden on mobile, visible on lg+ */}
           <div
             ref={leftPhotoRef}
-            className="absolute fabipets-card overflow-hidden hidden md:block"
+            className="hidden lg:block fabipets-card overflow-hidden absolute"
             style={{
               left: '0',
               top: '0',
@@ -123,14 +169,29 @@ const Contact = () => {
             <img
               src="/images/new_image_02.png"
               alt="Contact us"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover p-2.5 rounded-[28px]"
             />
           </div>
 
-          {/* Right Top Photo Card (small) */}
+          {/* Mobile Hero Image */}
+          <div className="lg:hidden mb-6">
+            <div className="fabipets-card overflow-hidden">
+              <img
+                src="/images/new_image_02.png"
+                alt="Contact us"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-64 object-cover p-2 rounded-[20px]"
+              />
+            </div>
+          </div>
+
+          {/* Right Top Photo Card (small) - Hidden on mobile */}
           <div
             ref={rightTopRef}
-            className="absolute fabipets-card-sm overflow-hidden hidden md:block"
+            className="hidden lg:block fabipets-card-sm overflow-hidden absolute"
             style={{
               left: '50vw',
               top: '0',
@@ -141,14 +202,16 @@ const Contact = () => {
             <img
               src="/images/new_image_03.jpg"
               alt="Happy pet"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover p-2 rounded-[18px]"
             />
           </div>
 
-          {/* Right Bottom Photo Card (medium) */}
+          {/* Right Bottom Photo Card (medium) - Hidden on mobile */}
           <div
             ref={rightBottomRef}
-            className="absolute fabipets-card-sm overflow-hidden hidden md:block"
+            className="hidden lg:block fabipets-card-sm overflow-hidden absolute"
             style={{
               left: '50vw',
               top: '28vh',
@@ -159,20 +222,19 @@ const Contact = () => {
             <img
               src="/images/new_image_04.jpg"
               alt="Elegant cat"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover p-2 rounded-[18px]"
             />
           </div>
 
-          {/* Contact Panel (right, large) */}
+          {/* Contact Panel - Full width on mobile, positioned on desktop */}
           <div
             ref={contactPanelRef}
-            className="md:absolute bg-camel card-border rounded-[28px] p-6 md:p-8 flex flex-col justify-between md:ml-auto"
+            className="lg:absolute bg-camel card-border rounded-[28px] p-6 md:p-8 flex flex-col justify-between lg:ml-auto w-full lg:max-w-[360px] lg:w-auto"
             style={{
               right: '0',
               top: '0',
-              width: '100%',
-              maxWidth: '360px',
-              minHeight: '72vh',
             }}
           >
             <div>
@@ -188,7 +250,7 @@ const Contact = () => {
 
               {/* Primary CTA */}
               <a
-                href="https://api.whatsapp.com/send/?phone=584142490629&text&type=phone_number&app_absent=0"
+                href={CONTACT.whatsapp.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-6 bg-white text-black font-display font-semibold text-sm px-5 py-3 rounded-full hover:bg-black hover:text-white transition-colors duration-300"
@@ -199,7 +261,7 @@ const Contact = () => {
 
               {/* Secondary CTA */}
               <a
-                href="mailto:info@fabipets.com"
+                href={`mailto:${CONTACT.email}`}
                 className="inline-flex items-center gap-2 mt-3 text-white font-body text-sm hover:underline"
               >
                 <Mail className="w-4 h-4" />
@@ -214,7 +276,7 @@ const Contact = () => {
                 placeholder={t('contact.form.namePlaceholder')}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full text-sm bg-white/10 border-white/30 text-white placeholder:text-white/50"
+                className="w-full text-sm bg-white/10 border-white/30 text-white placeholder:text-white/50 min-h-[44px] touch-manipulation"
                 required
               />
               <input
@@ -222,24 +284,76 @@ const Contact = () => {
                 placeholder={t('contact.form.emailPlaceholder')}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full text-sm bg-white/10 border-white/30 text-white placeholder:text-white/50"
+                className="w-full text-sm bg-white/10 border-white/30 text-white placeholder:text-white/50 min-h-[44px] touch-manipulation"
                 required
               />
+              <input
+                type="tel"
+                placeholder={t('contact.form.phonePlaceholder')}
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                className="w-full text-sm bg-white/10 border-white/30 text-white placeholder:text-white/50 min-h-[44px] touch-manipulation"
+              />
+              <select
+                value={formData.subject}
+                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                className="w-full text-sm bg-white/10 border border-white/30 text-white rounded-lg px-3 py-3 appearance-none min-h-[44px]"
+                required
+              >
+                <option value="" disabled className="bg-neutral-800">{t('contact.form.subjectPlaceholder')}</option>
+                <option value="dog" className="bg-neutral-800">{t('contact.form.subjectOptions.dog')}</option>
+                <option value="cat" className="bg-neutral-800">{t('contact.form.subjectOptions.cat')}</option>
+                <option value="rabbit" className="bg-neutral-800">{t('contact.form.subjectOptions.rabbit')}</option>
+                <option value="other" className="bg-neutral-800">{t('contact.form.subjectOptions.other')}</option>
+              </select>
+              <input
+                type="text"
+                placeholder={t('contact.form.petPlaceholder')}
+                value={formData.pet}
+                onChange={(e) => setFormData({ ...formData, pet: e.target.value })}
+                className="w-full text-sm bg-white/10 border-white/30 text-white placeholder:text-white/50 min-h-[44px] touch-manipulation"
+              />
+              {/* Photo upload */}
+              <label className="flex flex-col items-center justify-center w-full border border-dashed border-white/30 rounded-lg px-3 py-4 cursor-pointer hover:border-white/60 transition-colors min-h-[44px]">
+                <span className="text-white/50 text-xs text-center">
+                  {photo ? photo.name : t('contact.form.photoPlaceholder')}
+                </span>
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/*"
+                  className="hidden"
+                  onChange={(e) => setPhoto(e.target.files?.[0] ?? null)}
+                />
+              </label>
+
               <textarea
                 placeholder={t('contact.form.messagePlaceholder')}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full text-sm bg-white/10 border-white/30 text-white placeholder:text-white/50 resize-none"
+                className="w-full text-sm bg-white/10 border-white/30 text-white placeholder:text-white/50 resize-none touch-manipulation"
                 rows={3}
                 required
               />
               <button
                 type="submit"
-                className="w-full bg-white text-black font-display font-semibold text-sm px-5 py-3 rounded-full hover:bg-black hover:text-white transition-colors duration-300 flex items-center justify-center gap-2"
+                disabled={status === 'loading'}
+                className="w-full bg-white text-black font-display font-semibold text-sm px-5 py-3 rounded-full hover:bg-black hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed min-h-[48px]"
               >
                 <Send className="w-4 h-4" />
-                {t('contact.form.send')}
+                {status === 'loading' ? t('contact.form.sending') : t('contact.form.send')}
               </button>
+
+              {status === 'success' && (
+                <p className="text-white/90 text-sm text-center mt-1">
+                  ✓ {t('contact.form.successMessage')}
+                </p>
+              )}
+              {status === 'error' && (
+                <p className="text-red-300 text-sm text-center mt-1">
+                  {t('contact.form.errorMessage')}
+                </p>
+              )}
             </form>
 
             {/* Social Links */}
@@ -249,7 +363,7 @@ const Contact = () => {
               </p>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://www.instagram.com/fabi_pets_?igsh=NXQ1YTFydmh2YWsx"
+                  href={CONTACT.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -258,7 +372,7 @@ const Contact = () => {
                   <Instagram className="w-5 h-5 text-white" />
                 </a>
                 <a
-                  href="https://www.tiktok.com/@fabipets?_r=1&_t=ZS-94X3hBbcVAi"
+                  href={CONTACT.tiktok}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
@@ -272,10 +386,10 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Stamp */}
+          {/* Stamp - Hidden on mobile */}
           <div
             ref={stampRef}
-            className="absolute bg-camel border-2 border-white rounded-full flex items-center justify-center stamp-rotate hidden md:flex"
+            className="hidden lg:flex absolute bg-camel border-2 border-white rounded-full items-center justify-center stamp-rotate"
             style={{
               left: '42vw',
               top: '60vh',
