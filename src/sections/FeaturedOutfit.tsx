@@ -1,10 +1,9 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { CONTACT } from '../config';
 
-gsap.registerPlugin(ScrollTrigger);
 
 const FeaturedOutfit = () => {
   const { t } = useTranslation();
@@ -106,6 +105,8 @@ const FeaturedOutfit = () => {
               <img
                 src="/images/new_image_07.png"
                 alt="Statement Suit"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover rounded-[20px]"
               />
             </div>
@@ -122,6 +123,8 @@ const FeaturedOutfit = () => {
                 <img
                   src="/images/new_image_08.jpg"
                   alt="Suit detail"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover rounded-[14px]"
                 />
               </div>
@@ -136,6 +139,8 @@ const FeaturedOutfit = () => {
                 <img
                   src="/images/new_image_09.jpg"
                   alt="Accessories"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover rounded-[14px]"
                 />
               </div>
@@ -160,11 +165,8 @@ const FeaturedOutfit = () => {
             </div>
 
             <div className="mt-6">
-              <p className="font-display font-bold text-white text-xl md:text-2xl">
-                {t('featured.price')}
-              </p>
               <a
-                href="https://api.whatsapp.com/send/?phone=584142490629&text&type=phone_number&app_absent=0"
+                href={CONTACT.whatsapp.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-4 bg-white text-black font-display font-semibold text-sm px-5 py-3 rounded-full hover:bg-black hover:text-white transition-colors duration-300"

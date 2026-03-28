@@ -1,10 +1,8 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Quote, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-gsap.registerPlugin(ScrollTrigger);
 
 const Testimonials = () => {
   const { t } = useTranslation();
@@ -105,6 +103,8 @@ const Testimonials = () => {
               <img
                 src="/images/new_image_18.jpg"
                 alt="Happy customer"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover rounded-[20px]"
               />
             </div>
@@ -121,6 +121,8 @@ const Testimonials = () => {
                 <img
                   src="/images/new_image_19.jpg"
                   alt="Another happy pet"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover rounded-[14px]"
                 />
               </div>
@@ -135,6 +137,8 @@ const Testimonials = () => {
                 <img
                   src="/images/new_image_20.jpg"
                   alt="Pet in outfit"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover rounded-[14px]"
                 />
               </div>

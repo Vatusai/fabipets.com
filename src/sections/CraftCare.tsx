@@ -1,10 +1,8 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Heart, Shield, Sparkles, ArrowRight } from 'lucide-react';
+import { Heart, Shield, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-gsap.registerPlugin(ScrollTrigger);
 
 const CraftCare = () => {
   const { t } = useTranslation();
@@ -123,6 +121,8 @@ const CraftCare = () => {
               <img
                 src="/images/new_image_22.jpg"
                 alt="Craft and care"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover rounded-[20px]"
               />
             </div>
@@ -139,6 +139,8 @@ const CraftCare = () => {
                 <img
                   src="/images/new_image_28.png"
                   alt="Craft detail"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover rounded-[14px]"
                 />
               </div>
@@ -153,6 +155,8 @@ const CraftCare = () => {
                 <img
                   src="/images/new_image_01.png"
                   alt="Pet in outfit"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover rounded-[14px]"
                 />
               </div>
@@ -191,13 +195,6 @@ const CraftCare = () => {
               </div>
             </div>
 
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-white font-body text-sm hover:underline mt-6"
-            >
-              {t('craft.seeMaterials')}
-              <ArrowRight className="w-4 h-4" />
-            </a>
           </div>
         </div>
 

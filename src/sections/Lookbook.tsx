@@ -1,10 +1,8 @@
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Instagram } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-gsap.registerPlugin(ScrollTrigger);
 
 const Lookbook = () => {
   const { t } = useTranslation();
@@ -17,7 +15,7 @@ const Lookbook = () => {
     { src: '/images/new_image_23.jpg', alt: 'Style moment 2', span: '' },
     { src: '/images/new_image_24.jpg', alt: 'Style moment 3', span: '' },
     { src: '/images/new_image_25.jpg', alt: 'Style moment 4', span: '' },
-    { src: '/images/new_image_20.jpg', alt: 'Style moment 5', span: 'row-span-2' },
+    { src: '/images/new_image_27.jpg', alt: 'Style moment 5', span: 'row-span-2' },
   ];
 
   useLayoutEffect(() => {
@@ -113,6 +111,8 @@ const Lookbook = () => {
               <img
                 src={lookbookImages[0].src}
                 alt={lookbookImages[0].alt}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover image-zoom"
               />
             </div>

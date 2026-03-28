@@ -88,7 +88,7 @@
       "chest": "Chest",
       "length": "Length"
     },
-    "ourPromise": "Our Promise",
+    "ourPromise": "Our Work",
     "steps": {
       "measure": {
         "title": "Measure",
@@ -140,17 +140,29 @@
     "stamp": "CARE"
   },
   "contact": {
-    "label": "Get in Touch",
-    "title": "LET'S TALK",
-    "description": "Questions? Custom idea? Send a message—we reply fast.",
+    "label": "Dress your best friend in style!",
+    "title": "TRENDY DESIGNS",
+    "description": "Would you like to see our latest collections? Send us a message along with a photo of your pet and we'll share all the information with you.",
     "orderWhatsApp": "Order on WhatsApp",
     "emailUs": "Email us",
     "form": {
-      "namePlaceholder": "Name",
+      "namePlaceholder": "Applicant Name",
       "emailPlaceholder": "Email",
+      "phonePlaceholder": "Phone / WhatsApp",
+      "subjectPlaceholder": "Type of pet",
+      "subjectOptions": {
+        "dog": "Dog",
+        "cat": "Cat",
+        "rabbit": "Rabbit",
+        "other": "Other"
+      },
+      "petPlaceholder": "Pet name and size",
+      "photoPlaceholder": "Upload a photo of your pet (optional)",
       "messagePlaceholder": "Message",
       "send": "Send",
-      "successMessage": "Thank you for your message! We will get back to you soon."
+      "sending": "Sending...",
+      "successMessage": "Thank you for your message! We will get back to you soon.",
+      "errorMessage": "An error occurred. Please try again."
     },
     "followUs": "Follow Us",
     "footer": {

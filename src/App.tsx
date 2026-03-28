@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Hero from './sections/Hero';
 import FeaturedOutfit from './sections/FeaturedOutfit';
 import CollectionGrid from './sections/CollectionGrid';
-import CustomDesign from './sections/CustomDesign';
 import SizeGuide from './sections/SizeGuide';
 import Testimonials from './sections/Testimonials';
 import Lookbook from './sections/Lookbook';
@@ -43,8 +42,7 @@ function App() {
         <Hero />
         <FeaturedOutfit />
         <CollectionGrid />
-        <CustomDesign />
-        <SizeGuide />
+<SizeGuide />
         <Testimonials />
         <Lookbook />
         <CraftCare />

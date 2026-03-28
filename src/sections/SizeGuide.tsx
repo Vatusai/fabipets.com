@@ -1,10 +1,16 @@
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Ruler, Check, RefreshCw, Truck } from 'lucide-react';
+import { Ruler, Check, Truck } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-gsap.registerPlugin(ScrollTrigger);
+
+const sizeData = [
+  { size: 'XS', neck: '20-25cm', chest: '30-35cm', length: '20-25cm' },
+  { size: 'S', neck: '25-30cm', chest: '35-45cm', length: '25-30cm' },
+  { size: 'M', neck: '30-35cm', chest: '45-55cm', length: '30-35cm' },
+  { size: 'L', neck: '35-45cm', chest: '55-70cm', length: '35-45cm' },
+  { size: 'XL', neck: '45-55cm', chest: '70-85cm', length: '45-55cm' },
+];
 
 const SizeGuide = () => {
   const { t } = useTranslation();
@@ -24,11 +30,6 @@ const SizeGuide = () => {
       icon: Check,
       title: t('sizeGuide.steps.adjust.title'),
       description: t('sizeGuide.steps.adjust.description'),
-    },
-    {
-      icon: RefreshCw,
-      title: t('sizeGuide.steps.returns.title'),
-      description: t('sizeGuide.steps.returns.description'),
     },
     {
       icon: Truck,
@@ -139,7 +140,7 @@ const SizeGuide = () => {
                 {t('sizeGuide.howToMeasure')}
               </h3>
               
-              {/* Size Chart */}
+              {/* Size Chart - How to measure */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between py-3 border-b border-black/10">
                   <span className="font-body text-black/70">{t('sizeGuide.measurements.neck.label')}</span>
@@ -155,8 +156,8 @@ const SizeGuide = () => {
                 </div>
               </div>
 
-              {/* Size Table */}
-              <div className="mt-8 overflow-x-auto">
+              {/* Desktop Table */}
+              <div className="mt-8 hidden md:block overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b-2 border-black">
@@ -167,38 +168,46 @@ const SizeGuide = () => {
                     </tr>
                   </thead>
                   <tbody className="font-body">
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">XS</td>
-                      <td className="py-2">20-25cm</td>
-                      <td className="py-2">30-35cm</td>
-                      <td className="py-2">20-25cm</td>
-                    </tr>
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">S</td>
-                      <td className="py-2">25-30cm</td>
-                      <td className="py-2">35-45cm</td>
-                      <td className="py-2">25-30cm</td>
-                    </tr>
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">M</td>
-                      <td className="py-2">30-35cm</td>
-                      <td className="py-2">45-55cm</td>
-                      <td className="py-2">30-35cm</td>
-                    </tr>
-                    <tr className="border-b border-black/10">
-                      <td className="py-2">L</td>
-                      <td className="py-2">35-45cm</td>
-                      <td className="py-2">55-70cm</td>
-                      <td className="py-2">35-45cm</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2">XL</td>
-                      <td className="py-2">45-55cm</td>
-                      <td className="py-2">70-85cm</td>
-                      <td className="py-2">45-55cm</td>
-                    </tr>
+                    {sizeData.map((row) => (
+                      <tr key={row.size} className="border-b border-black/10">
+                        <td className="py-2 font-semibold">{row.size}</td>
+                        <td className="py-2">{row.neck}</td>
+                        <td className="py-2">{row.chest}</td>
+                        <td className="py-2">{row.length}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
+              </div>
+
+              {/* Mobile Cards */}
+              <div className="mt-8 md:hidden space-y-3">
+                {sizeData.map((row) => (
+                  <div 
+                    key={row.size} 
+                    className="bg-black/5 rounded-xl p-4 border border-black/10"
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="font-display font-bold text-lg bg-camel text-white px-3 py-1 rounded-full">
+                        {row.size}
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-3 gap-2 text-sm">
+                      <div className="text-center">
+                        <p className="font-mono text-black/50 text-xs uppercase">{t('sizeGuide.table.neck')}</p>
+                        <p className="font-body text-black font-medium">{row.neck}</p>
+                      </div>
+                      <div className="text-center border-x border-black/10">
+                        <p className="font-mono text-black/50 text-xs uppercase">{t('sizeGuide.table.chest')}</p>
+                        <p className="font-body text-black font-medium">{row.chest}</p>
+                      </div>
+                      <div className="text-center">
+                        <p className="font-mono text-black/50 text-xs uppercase">{t('sizeGuide.table.length')}</p>
+                        <p className="font-body text-black font-medium">{row.length}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -213,6 +222,8 @@ const SizeGuide = () => {
               <img
                 src="/images/new_image_17.jpg"
                 alt="Size guide demonstration"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 md:h-56 object-cover p-2 rounded-[18px]"
               />
             </div>
