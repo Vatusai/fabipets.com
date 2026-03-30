@@ -53,12 +53,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection('#collection')}
-              className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
-            >
-              {t('nav.collection')}
-            </button>
+
             <a
               href="/about-us.html"
               className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
@@ -69,26 +64,11 @@ const Navigation = () => {
               href="/tienda.html"
               className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
             >
-              Tienda
+              {t('nav.store')}
             </a>
-            <a
-              href="/shop.html"
-              className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
-            >
-              Shop
-            </a>
-            <button
-              onClick={() => scrollToSection('#custom')}
-              className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
-            >
-              {t('nav.custom')}
-            </button>
-            <button
-              onClick={() => scrollToSection('#lookbook')}
-              className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
-            >
-              {t('nav.lookbook')}
-            </button>
+
+
+
             <button
               onClick={() => scrollToSection('#contact')}
               className="font-body text-sm text-black/70 hover:text-black transition-colors duration-300"
@@ -123,12 +103,7 @@ const Navigation = () => {
         }`}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
-          <button
-            onClick={() => { scrollToSection('#collection'); setIsMobileMenuOpen(false); }}
-            className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
-          >
-            {t('nav.collection')}
-          </button>
+
           <a
             href="/about-us.html"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -141,27 +116,11 @@ const Navigation = () => {
             onClick={() => setIsMobileMenuOpen(false)}
             className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
           >
-            Tienda
+            {t('nav.store')}
           </a>
-          <a
-            href="/shop.html"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
-          >
-            Shop
-          </a>
-          <button
-            onClick={() => { scrollToSection('#custom'); setIsMobileMenuOpen(false); }}
-            className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
-          >
-            {t('nav.custom')}
-          </button>
-          <button
-            onClick={() => { scrollToSection('#lookbook'); setIsMobileMenuOpen(false); }}
-            className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"
-          >
-            {t('nav.lookbook')}
-          </button>
+
+
+
           <button
             onClick={() => { scrollToSection('#contact'); setIsMobileMenuOpen(false); }}
             className="font-display text-2xl text-black hover:text-camel transition-colors duration-300"

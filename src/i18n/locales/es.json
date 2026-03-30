@@ -4,6 +4,7 @@
     "custom": "Personalizado",
     "lookbook": "Lookbook",
     "contact": "Contacto",
+    "store": "Tienda",
     "orderWhatsApp": "Pedir por WhatsApp"
   },
   "language": {
@@ -14,7 +15,7 @@
   "hero": {
     "headline1": "Moda y estilo para tu mascota",
     "headline2": "",
-    "subtitle": "Trajes, vestidos, disfraces y mucho más.",
+    "subtitle": "Ropa, trajes, vestidos y disfraces para mascotas",
     "cta": "Explora la colección"
   },
   "featured": {

@@ -156,14 +156,15 @@ const Hero = () => {
             aspectRatio: '16/10',
           }}
         >
-          {/* Collage Images */}
+          {/* Collage Images - Distribución Equilibrada */}
+          {/* Fila superior - 2 imágenes */}
           {/* Image A - top-left */}
           <div
             ref={(el) => { if (el) imagesRef.current[0] = el; }}
             className="absolute fabipets-card-sm overflow-hidden"
             style={{
-              left: '5%',
-              top: '8%',
+              left: '8%',
+              top: '6%',
               width: '35%',
               height: '40%',
             }}
@@ -186,7 +187,7 @@ const Hero = () => {
             className="absolute fabipets-card-sm overflow-hidden"
             style={{
               left: '55%',
-              top: '8%',
+              top: '6%',
               width: '38%',
               height: '40%',
             }}
@@ -203,13 +204,37 @@ const Hero = () => {
             </picture>
           </div>
 
+          {/* Image F - center (movida arriba para balance visual) */}
+          <div
+            ref={(el) => { if (el) imagesRef.current[5] = el; }}
+            className="absolute fabipets-card-sm overflow-hidden z-10"
+            style={{
+              left: '43%',
+              top: '28%',
+              width: '14%',
+              height: '24%',
+            }}
+          >
+            <picture>
+              <source srcSet="/images/new_image_06.webp" type="image/webp" />
+              <img
+                src="/images/new_image_06.jpg"
+                alt="Pet paws closeup"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
+
+          {/* Fila inferior - 3 imágenes alineadas */}
           {/* Image C - bottom-left */}
           <div
             ref={(el) => { if (el) imagesRef.current[2] = el; }}
             className="absolute fabipets-card-sm overflow-hidden"
             style={{
-              left: '5%',
-              top: '54%',
+              left: '8%',
+              top: '52%',
               width: '25%',
               height: '36%',
             }}
@@ -231,8 +256,8 @@ const Hero = () => {
             ref={(el) => { if (el) imagesRef.current[3] = el; }}
             className="absolute fabipets-card-sm overflow-hidden"
             style={{
-              left: '33%',
-              top: '54%',
+              left: '37.5%',
+              top: '52%',
               width: '25%',
               height: '36%',
             }}
@@ -254,9 +279,9 @@ const Hero = () => {
             ref={(el) => { if (el) imagesRef.current[4] = el; }}
             className="absolute fabipets-card-sm overflow-hidden"
             style={{
-              left: '61%',
-              top: '54%',
-              width: '32%',
+              left: '67%',
+              top: '52%',
+              width: '25%',
               height: '36%',
             }}
           >
@@ -271,45 +296,28 @@ const Hero = () => {
               />
             </picture>
           </div>
-
-          {/* Image F - center overlay (small) */}
-          <div
-            ref={(el) => { if (el) imagesRef.current[5] = el; }}
-            className="absolute fabipets-card-sm overflow-hidden z-10"
-            style={{
-              left: '42%',
-              top: '36%',
-              width: '14%',
-              height: '24%',
-            }}
-          >
-            <picture>
-              <source srcSet="/images/new_image_06.webp" type="image/webp" />
-              <img
-                src="/images/new_image_06.jpg"
-                alt="Pet paws closeup"
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-          </div>
         </div>
 
-        {/* Headline */}
+        {/* Headline - Logo */}
         <div
           ref={headlineRef}
-          className="absolute font-display font-black text-black uppercase leading-none"
+          className="absolute"
           style={{
-            left: '7vw',
-            bottom: '10vh',
-            fontSize: 'clamp(32px, 5vw, 72px)',
+            left: '50%',
+            top: '8vh',
+            transform: 'translateX(-50%)',
+            textAlign: 'center',
           }}
         >
-          <div>{t('hero.headline1')}</div>
-          <div>
-            {t('hero.headline2')}<span className="text-camel">.</span>
-          </div>
+          <img
+            src="/logo-fabipets.png"
+            alt="FabiPets"
+            style={{
+              height: 'clamp(60px, 10vw, 140px)',
+              width: 'auto',
+              maxWidth: '70vw',
+            }}
+          />
         </div>
 
         {/* Subheadline */}
